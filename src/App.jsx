@@ -297,20 +297,20 @@ function App() {
               <text fontWeight="800" x="225" y="52" dominantBaseline="middle" textAnchor="middle"
                 fontSize="24">产品标识卡</text>
 
-              <text x='34' y='110' dominantBaseline="middle" textAnchor="middle" fontSize='14'>供应商</text>
-              <text x='34' y='132' dominantBaseline="middle" textAnchor="middle" fontSize='14'>品名</text>
-              <text x='34' y='155' dominantBaseline="middle" textAnchor="middle" fontSize='14'>规格</text>
-              <text x='34' y='178' dominantBaseline="middle" textAnchor="middle" fontSize='14'>捆/炉号</text>
-              <text x='34' y='201' dominantBaseline="middle" textAnchor="middle" fontSize='14'>数量</text>
-              <text x='34' y='225' dominantBaseline="middle" textAnchor="middle" fontSize='14'>生产日期</text>
+              <text x='34' y='113' dominantBaseline="middle" textAnchor="middle" fontSize='14'>供应商</text>
+              <text x='34' y='135' dominantBaseline="middle" textAnchor="middle" fontSize='14'>品名</text>
+              <text x='34' y='158' dominantBaseline="middle" textAnchor="middle" fontSize='14'>规格</text>
+              <text x='34' y='181' dominantBaseline="middle" textAnchor="middle" fontSize='14'>捆/炉号</text>
+              <text x='34' y='204' dominantBaseline="middle" textAnchor="middle" fontSize='14'>数量</text>
+              <text x='34' y='228' dominantBaseline="middle" textAnchor="middle" fontSize='14'>生产日期</text>
 
-              <text x='296' y='110' dominantBaseline="middle" textAnchor="middle" fontSize='14'>采购单号</text>
-              <text x='234' y='132' dominantBaseline="middle" textAnchor="middle" fontSize='14'>牌号</text>
-              <text x='360' y='132' dominantBaseline="middle" textAnchor="middle" fontSize='14'>产地</text>
-              <text x='200' y='178' dominantBaseline="middle" textAnchor="middle" fontSize='14'>批号</text>
-              <text x='146' y='201' dominantBaseline="middle" textAnchor="middle" fontSize='14'>净重</text>
-              <text x='250' y='201' dominantBaseline="middle" textAnchor="middle" fontSize='14'>毛重</text>
-              <text x='200' y='225' dominantBaseline="middle" textAnchor="middle" fontSize='14'>检验员</text>
+              <text x='296' y='113' dominantBaseline="middle" textAnchor="middle" fontSize='14'>采购单号</text>
+              <text x='234' y='135' dominantBaseline="middle" textAnchor="middle" fontSize='14'>牌号</text>
+              <text x='360' y='135' dominantBaseline="middle" textAnchor="middle" fontSize='14'>产地</text>
+              <text x='200' y='181' dominantBaseline="middle" textAnchor="middle" fontSize='14'>批号</text>
+              <text x='146' y='204' dominantBaseline="middle" textAnchor="middle" fontSize='14'>净重</text>
+              <text x='250' y='204' dominantBaseline="middle" textAnchor="middle" fontSize='14'>毛重</text>
+              <text x='200' y='228' dominantBaseline="middle" textAnchor="middle" fontSize='14'>检验员</text>
             </g>
           </svg>
         </div>

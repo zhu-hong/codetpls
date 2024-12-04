@@ -42,7 +42,7 @@ function App() {
             <line x1='124' y1='173' x2='124' y2='196' stroke='#000000' strokeWidth='1' />
             <line x1='270' y1='173' x2='270' y2='196' stroke='#000000' strokeWidth='1' />
 
-            <svg x="364" y="14" width="72" height="72" shapeRendering="crispEdges" xmlns="http://www.w3.org/2000/svg"
+            <svg x="372" y="8" width="70" height="70" shapeRendering="crispEdges" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25">
               <rect width="25" height="25" fill="#ffffff"></rect>
               <path fill="#000000"
@@ -54,44 +54,44 @@ function App() {
               <text fontWeight="800" x="225" y="45" dominantBaseline="middle" textAnchor="middle"
                 fontSize="24">产品标识卡</text>
 
-              <text x='34' y='113' dominantBaseline="middle" textAnchor="middle" fontSize='14'>供应商</text>
-              <text x='68' y='116' fontSize='12'></text>
+              <text x='34' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='14'>供应商</text>
+              <text x='68' y='101' fontSize='12'></text>
 
-              <text x='34' y='135' dominantBaseline="middle" textAnchor="middle" fontSize='14'>品名</text>
-              <text x='68' y='138' fontSize='12'></text>
+              <text x='34' y='120' dominantBaseline="middle" textAnchor="middle" fontSize='14'>品名</text>
+              <text x='68' y='123' fontSize='12'></text>
 
-              <text x='34' y='158' dominantBaseline="middle" textAnchor="middle" fontSize='14'>规格</text>
-              <text x='68' y='161' fontSize='12'></text>
+              <text x='34' y='143' dominantBaseline="middle" textAnchor="middle" fontSize='14'>规格</text>
+              <text x='68' y='146' fontSize='12'></text>
 
-              <text x='34' y='181' dominantBaseline="middle" textAnchor="middle" fontSize='14'>捆/炉号</text>
-              <text x='68' y='184' fontSize='12'></text>
+              <text x='34' y='166' dominantBaseline="middle" textAnchor="middle" fontSize='14'>捆/炉号</text>
+              <text x='68' y='169' fontSize='12'></text>
 
-              <text x='34' y='204' dominantBaseline="middle" textAnchor="middle" fontSize='14'>数量</text>
-              <text x='68' y='207' fontSize='12'></text>
+              <text x='34' y='189' dominantBaseline="middle" textAnchor="middle" fontSize='14'>数量</text>
+              <text x='68' y='192' fontSize='12'></text>
 
-              <text x='34' y='228' dominantBaseline="middle" textAnchor="middle" fontSize='14'>生产日期</text>
-              <text x='68' y='231' fontSize='12'></text>
+              <text x='34' y='213' dominantBaseline="middle" textAnchor="middle" fontSize='14'>生产日期</text>
+              <text x='68' y='216' fontSize='12'></text>
 
-              <text x='296' y='113' dominantBaseline="middle" textAnchor="middle" fontSize='14'>采购单号</text>
-              <text x='340' y='116' fontSize='12'></text>
+              <text x='296' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='14'>采购单号</text>
+              <text x='340' y='101' fontSize='12'></text>
 
-              <text x='234' y='135' dominantBaseline="middle" textAnchor="middle" fontSize='14'>牌号</text>
-              <text x='264' y='138' fontSize='12'></text>
+              <text x='234' y='120' dominantBaseline="middle" textAnchor="middle" fontSize='14'>牌号</text>
+              <text x='264' y='123' fontSize='12'></text>
 
-              <text x='360' y='135' dominantBaseline="middle" textAnchor="middle" fontSize='14'>产地</text>
-              <text x='390' y='138' fontSize='12'></text>
+              <text x='360' y='120' dominantBaseline="middle" textAnchor="middle" fontSize='14'>产地</text>
+              <text x='390' y='123' fontSize='12'></text>
 
-              <text x='200' y='181' dominantBaseline="middle" textAnchor="middle" fontSize='14'>批号</text>
-              <text x='234' y='184' fontSize='12'></text>
+              <text x='200' y='166' dominantBaseline="middle" textAnchor="middle" fontSize='14'>批号</text>
+              <text x='234' y='169' fontSize='12'></text>
 
-              <text x='146' y='204' dominantBaseline="middle" textAnchor="middle" fontSize='14'>净重</text>
-              <text x='174' y='207' fontSize='12'></text>
+              <text x='146' y='189' dominantBaseline="middle" textAnchor="middle" fontSize='14'>净重</text>
+              <text x='174' y='192' fontSize='12'></text>
 
-              <text x='250' y='204' dominantBaseline="middle" textAnchor="middle" fontSize='14'>毛重</text>
-              <text x='274' y='207' fontSize='12'></text>
+              <text x='250' y='189' dominantBaseline="middle" textAnchor="middle" fontSize='14'>毛重</text>
+              <text x='274' y='192' fontSize='12'></text>
 
-              <text x='200' y='228' dominantBaseline="middle" textAnchor="middle" fontSize='14'>检验员</text>
-              <text x='234' y='231' fontSize='12'></text>
+              <text x='200' y='213' dominantBaseline="middle" textAnchor="middle" fontSize='14'>检验员</text>
+              <text x='234' y='216' fontSize='12'></text>
             </g>
           </svg>
         </div>

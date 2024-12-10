@@ -510,31 +510,31 @@ function App() {
         <div style={{ boxShadow: '0px 0px 20px 6px rgba(0,0,0,0.2)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 720" shapeRendering="crispEdges" width="50mm" height="80mm">
             <rect x="0" y="0" width="450" height="720" fill="#ffffff" />
-            <g fontWeight="700" fontFamily="微软雅黑" fill="#000000">
-              <text fontWeight="800" x="225" y="48" dominantBaseline="middle" textAnchor="middle" fontSize="34">底盘供应商标签</text>
+            <g fontWeight="900" fontFamily="微软雅黑" fill="#000000">
+              <text transform='scale(.9 1)' x="225" y="54" dominantBaseline="middle" textAnchor="middle" fontSize="34">底盘供应商标签</text>
 
-              <text x="32" y="106" fontSize="22">采购订单：{"${data.ERPCode}"}</text>
+              <text transform='scale(.9 1)' x="26" y="112" fontSize="28">采购订单：{"${data.ERPCode}"}</text>
 
-              <text x="32" y="146" fontSize="22">物料号：{"${data.ProductCode}"}</text>
+              <text transform='scale(.9 1)' x="26" y="152" fontSize="28">物料号：{"${data.ProductCode}"}</text>
 
-              <text x="32" y="186" fontSize="22">{"${data.ProductName?.split('-')[0]}-"}</text>
-              <text x="32" y="212" fontSize="22">{"${data.ProductName?.split('-')[1]}"}</text>
+              <text transform='scale(.9 1)' x="26" y="192" fontSize="28">{"${data.ProductName?.split('-')[0]}-"}</text>
+              <text transform='scale(.9 1)' x="26" y="218" fontSize="28">{"${data.ProductName?.split('-')[1]}"}</text>
 
-              <text x="32" y="252" fontSize="22">生产日期：{"${data.ProductionDate}"}</text>
+              <text transform='scale(.9 1)' x="26" y="258" fontSize="28">生产日期：{"${data.ProductionDate}"}</text>
 
-              <text x="32" y="292" fontSize="22">批次：{"${data.Lot}"}</text>
+              <text transform='scale(.9 1)' x="26" y="298" fontSize="28">批次：{"${data.Lot}"}</text>
 
-              <text x="32" y="332" fontSize="22">炉号：{"${data.HeatNumber}"}</text>
-              <text x="233" y="332" fontSize="22">数量：{"${data.Amount}${data.UnitName}"}</text>
+              <text transform='scale(.9 1)' x="26" y="338" fontSize="28">炉号：{"${data.HeatNumber}"}</text>
+              <text transform='scale(.9 1)' x="253" y="338" fontSize="28">数量：{"${data.Amount}${data.UnitName}"}</text>
 
-              <text x="32" y="372" fontSize="22">供应商：{"${data.Supplier}"}</text>
+              <text transform='scale(.9 1)' x="26" y="380" fontSize="28">供应商：{"${data.Supplier}"}</text>
 
-              <text x="32" y="412" fontSize="22">生产地址：{"${data.Address || ''}"}</text>
+              <text transform='scale(.9 1)' x="26" y="420" fontSize="28">生产地址：{"${data.Address || ''}"}</text>
 
-              <text x="32" y="452" fontSize="22">追溯号：{"${data.TraceCode}"}</text>
+              <text transform='scale(.9 1)' x="26" y="460" fontSize="28">追溯号：{"${data.TraceCode}"}</text>
             </g>
 
-            <svg x="135" y="500" width="180" height="180" shapeRendering="crispEdges" xmlns="http://www.w3.org/2000/svg"
+            <svg x="135" y="510" width="180" height="180" shapeRendering="crispEdges" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25">
               <rect width="25" height="25" fill="#ffffff"></rect>
               <path fill="#000000"

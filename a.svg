@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 720" shape-rendering="crispEdges" width="590px" height="944px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 720" shape-rendering="crispEdges" width="50mm" height="80mm">
   <rect x="0" y="0" width="450" height="720" fill="#ffffff"></rect>
   <g font-weight="900" font-family="微软雅黑" fill="#000000">
     <text transform="scale(.9 1)" x="225" y="54" dominant-baseline="middle" text-anchor="middle" font-size="34">底盘供应商标签</text>
-    <text transform="scale(.9 1)" x="26" y="112" font-size="28">采购订单：${data.ERPCode}</text>
-    <text transform="scale(.9 1)" x="26" y="152" font-size="28">物料号：${data.ProductCode}</text>
-    <text transform="scale(.9 1)" x="26" y="192" font-size="28">${data.ProductName?.split('-')[0]}-</text>
-    <text transform="scale(.9 1)" x="26" y="218" font-size="28">${data.ProductName?.split('-')[1]}</text>
-    <text transform="scale(.9 1)" x="26" y="258" font-size="28">生产日期：${data.ProductionDate}</text>
-    <text transform="scale(.9 1)" x="26" y="298" font-size="28">批次：${data.Lot}</text>
-    <text transform="scale(.9 1)" x="26" y="338" font-size="28">炉号：${data.HeatNumber}</text>
-    <text transform="scale(.9 1)" x="253" y="338" font-size="28">数量：${data.Amount}${data.UnitName}</text>
-    <text transform="scale(.9 1)" x="26" y="380" font-size="28">供应商：${data.Supplier}</text>
-    <text transform="scale(.9 1)" x="26" y="420" font-size="28">生产地址：${data.Address || ''}</text>
-    <text transform="scale(.9 1)" x="26" y="460" font-size="28">追溯号：${data.TraceCode}</text>
+    <text transform="scale(.9 1)" x="26" y="112" font-size="26">采购订单：${data.ERPCode ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="152" font-size="26">物料号：${data.ProductCode ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="192" font-size="26">${data.ProductName?.split('-')?.[0] ?? ''}-</text>
+    <text transform="scale(.9 1)" x="26" y="218" font-size="26">${data.ProductName?.split('-')?.[1] ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="258" font-size="26">生产日期：${data.ProductionDate ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="298" font-size="26">批次：${data.Lot ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="338" font-size="26">炉号：${data.HeatNumber ?? ''}</text>
+    <text transform="scale(.9 1)" x="253" y="338" font-size="26">数量：${data.Amount ?? ''}${data.UnitName ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="380" font-size="26">供应商：${data.Supplier ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="420" font-size="26">生产地址：${data.Address ?? ''}</text>
+    <text transform="scale(.9 1)" x="26" y="460" font-size="26">追溯号：${data.TraceCode ?? ''}</text>
   </g>
   <svg x="135" y="510" width="180" height="180" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
     <rect width="25" height="25" fill="#ffffff"></rect>

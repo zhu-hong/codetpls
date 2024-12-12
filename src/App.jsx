@@ -64,40 +64,40 @@ function App() {
                 fontSize="24">产品标识卡</text>
 
               <text x='34' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='14'>供应商</text>
-              <text x='68' y='99' fontSize='12'>{"${data.SupplierName}"}</text>
+              <text x='68' y='99' fontSize='12'>{"${data.SupplierName ?? ''}"}</text>
 
               <text x='34' y='120' dominantBaseline="middle" textAnchor="middle" fontSize='14'>品名</text>
-              <text x='68' y='121' fontSize='12'>{"${data.ProductName}"}</text>
+              <text x='68' y='121' fontSize='12'>{"${data.ProductName ?? ''}"}</text>
 
               <text x='34' y='143' dominantBaseline="middle" textAnchor="middle" fontSize='14'>规格</text>
-              <text x='68' y='144' fontSize='12'>{"${data.ProductSpec}"}</text>
+              <text x='68' y='144' fontSize='12'>{"${data.ProductSpec ?? ''}"}</text>
 
               <text x='34' y='166' dominantBaseline="middle" textAnchor="middle" fontSize='14'>捆/炉号</text>
-              <text x='68' y='167' fontSize='12'>{"${data.HeatNumber}"}</text>
+              <text x='68' y='167' fontSize='12'>{"${data.HeatNumber ?? ''}"}</text>
 
               <text x='34' y='189' dominantBaseline="middle" textAnchor="middle" fontSize='14'>数量</text>
-              <text x='68' y='190' fontSize='12'>{"${data.Amount}"}</text>
+              <text x='68' y='190' fontSize='12'>{"${data.Amount ?? ''}"}</text>
 
               <text x='34' y='213' dominantBaseline="middle" textAnchor="middle" fontSize='14'>生产日期</text>
-              <text x='68' y='214' fontSize='12'>{"${data.ProductionDate}"}</text>
+              <text x='68' y='214' fontSize='12'>{"${data.ProductionDate ?? ''}"}</text>
 
               <text x='296' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='14'>采购单号</text>
-              <text x='340' y='99' fontSize='12'>{"${data.ERPCode}"}</text>
+              <text x='340' y='99' fontSize='12'>{"${data.ERPCode ?? ''}"}</text>
 
               <text x='234' y='120' dominantBaseline="middle" textAnchor="middle" fontSize='14'>牌号</text>
-              <text x='264' y='121' fontSize='12'>{"${data.Mark || ''}"}</text>
+              <text x='264' y='121' fontSize='12'>{"${data.Mark ?? '' || ''}"}</text>
 
               <text x='360' y='120' dominantBaseline="middle" textAnchor="middle" fontSize='14'>产地</text>
               <text x='390' y='121' fontSize='12'></text>
 
               <text x='200' y='166' dominantBaseline="middle" textAnchor="middle" fontSize='14'>批号</text>
-              <text x='234' y='167' fontSize='12'>{"${data.Lot}"}</text>
+              <text x='234' y='167' fontSize='12'>{"${data.Lot ?? ''}"}</text>
 
               <text x='146' y='189' dominantBaseline="middle" textAnchor="middle" fontSize='14'>净重</text>
-              <text x='174' y='190' fontSize='12'>{"${data.NetWeight}"}</text>
+              <text x='174' y='190' fontSize='12'>{"${data.NetWeight ?? ''}"}</text>
 
               <text x='250' y='189' dominantBaseline="middle" textAnchor="middle" fontSize='14'>毛重</text>
-              <text x='274' y='190' fontSize='12'>{"${data.GrossWeight}"}</text>
+              <text x='274' y='190' fontSize='12'>{"${data.GrossWeight ?? ''}"}</text>
 
               <text x='200' y='213' dominantBaseline="middle" textAnchor="middle" fontSize='14'>检验员</text>
               <text x='234' y='214' fontSize='12'></text>
@@ -126,40 +126,40 @@ function App() {
                 fontSize="16">宁波途兴汽车部件有限公司</text>
               <text fontWeight="800" x="225" y="72" dominantBaseline="middle" textAnchor="middle" fontSize="18">委外产品标识卡</text>
 
-              <text x="436" y="144" fontSize="15" textAnchor="end">{'${data.Code}'}</text>
+              <text x="436" y="144" fontSize="15" textAnchor="end">{"${data.Code ?? ''}"}</text>
 
               <text x="20" y="122" fontSize="16">炉号</text>
-              <text x="64" y="122" fontSize="16">{'${data.HeatNumber}'}</text>
+              <text x="64" y="122" fontSize="16">{"${data.HeatNumber ?? ''}"}</text>
 
               <text x="20" y="175" fontSize="16">委外订单号</text>
-              <text x="106" y="175" fontSize="16">{'${data.OrderCode}'}</text>
+              <text x="106" y="175" fontSize="16">{"${data.OrderCode ?? ''}"}</text>
               <line x1="106" y1="180" x2="410" y2="180" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="226" fontSize="16">产品名称</text>
-              <text x="106" y="226" fontSize="16">{'${data.ProductName}'}</text>
-              <line x1="106" y1="230" x2="220" y2="230" stroke="#000000" strokeWidth="2" />
-              <text x="235" y="226" fontSize="16">供应商</text>
-              <text x="294" y="226" fontSize="16">{'${data.SupplierName}'}</text>
-              <line x1="294" y1="230" x2="410" y2="230" stroke="#000000" strokeWidth="2" />
+              <text x="134" y="226" fontSize="16" transform='scale(0.8, 1)'>{"${data.ProductName ?? ''}"}</text>
+              <line x1="106" y1="230" x2="250" y2="230" stroke="#000000" strokeWidth="2" />
+              <text x="255" y="226" fontSize="16">供应商</text>
+              <text x="310" y="226" fontSize="16">{"${data.SupplierName ?? ''}"}</text>
+              <line x1="310" y1="230" x2="410" y2="230" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="276" fontSize="16">数量</text>
-              <text x="106" y="276" fontSize="16">{'${data.Amount}'}</text>
+              <text x="106" y="276" fontSize="16">{"${data.Amount ?? ''}"}</text>
               <line x1="106" y1="280" x2="410" y2="280" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="326" fontSize="16">钢印号</text>
-              <text x="106" y="326" fontSize="16">{'${data.SteelSealNumber}'}</text>
+              <text x="106" y="326" fontSize="16">{"${data.SteelSealNumber ?? ''}"}</text>
               <line x1="106" y1="330" x2="410" y2="330" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="376" fontSize="16">批号</text>
-              <text x="106" y="376" fontSize="16">{'${data.Lot}'}</text>
+              <text x="106" y="376" fontSize="16">{"${data.Lot ?? ''}"}</text>
               <line x1="106" y1="380" x2="410" y2="380" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="426" fontSize="16">操作工</text>
-              <text x="106" y="426" fontSize="16">{'${data.UserName}'}</text>
+              <text x="106" y="426" fontSize="16">{"${data.UserName ?? ''}"}</text>
               <line x1="106" y1="430" x2="410" y2="430" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="476" fontSize="16">生产日期</text>
-              <text x="106" y="476" fontSize="16">{'${data.ProductionDate}'}</text>
+              <text x="106" y="476" fontSize="16">{"${data.ProductionDate ?? ''}"}</text>
               <line x1="106" y1="480" x2="410" y2="480" stroke="#000000" strokeWidth="2" />
             </g>
           </svg>
@@ -184,54 +184,54 @@ function App() {
                 fontSize="16">宁波途兴汽车部件有限公司</text>
               <text fontWeight="800" x="225" y="76" dominantBaseline="middle" textAnchor="middle" fontSize="18">工序标识卡</text>
 
-              <text x="436" y="144" fontSize="15" textAnchor="end">{'${data.Code}'}</text>
+              <text x="436" y="144" fontSize="15" textAnchor="end">{"${data.Code ?? ''}"}</text>
 
               <text x="20" y="132" fontSize="16">炉号</text>
-              <text x="64" y="132" fontSize="16">{'${data.HeatNumber}'}</text>
+              <text x="64" y="132" fontSize="16">{"${data.HeatNumber ?? ''}"}</text>
 
               <text x="20" y="188" fontSize="16">生产车间</text>
-              <text x="94" y="188" fontSize="16">{'${data.WorkshopName}'}</text>
+              <text x="94" y="188" fontSize="16">{"${data.WorkshopName ?? ''}"}</text>
               <line x1="94" y1="192" x2="210" y2="192" stroke="#000000" strokeWidth="2" />
               <text x="216" y="188" fontSize="16">班次</text>
-              <text x="286" y="188" fontSize="16">{'${data.ShiftName}'}</text>
+              <text x="286" y="188" fontSize="16">{"${data.ShiftName ?? ''}"}</text>
               <line x1="286" y1="192" x2="410" y2="192" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="224" fontSize="16">产品名称</text>
-              <text x="94" y="224" fontSize="16">{'${data.ProductName}'}</text>
+              <text x="94" y="224" fontSize="16">{"${data.ProductName ?? ''}"}</text>
               <line x1="94" y1="228" x2="210" y2="228" stroke="#000000" strokeWidth="2" />
               <text x="216" y="224" fontSize="16">图号</text>
-              <text x="286" y="224" fontSize="16">{'${data.ProductDrawingNumber}'}</text>
+              <text x="286" y="224" fontSize="16">{"${data.ProductDrawingNumber ?? ''}"}</text>
               <line x1="286" y1="228" x2="410" y2="228" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="260" fontSize="16">本道工序</text>
-              <text x="94" y="260" fontSize="16">{'${data.CurrentProcessName}'}</text>
+              <text x="94" y="260" fontSize="16">{"${data.CurrentProcessName ?? ''}"}</text>
               <line x1="94" y1="264" x2="210" y2="264" stroke="#000000" strokeWidth="2" />
               <text x="216" y="260" fontSize="16">下道工序</text>
-              <text x="286" y="260" fontSize="16">{'${data.NextProcessName}'}</text>
+              <text x="286" y="260" fontSize="16">{"${data.NextProcessName ?? ''}"}</text>
               <line x1="286" y1="264" x2="410" y2="264" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="296" fontSize="16">生产批次</text>
-              <text x="94" y="296" fontSize="16">{'${data.Lot}'}</text>
+              <text x="94" y="296" fontSize="16">{"${data.Lot ?? ''}"}</text>
               <line x1="94" y1="300" x2="410" y2="300" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="332" fontSize="16">钢印号</text>
-              <text x="94" y="332" fontSize="16">{'${data.SteelSealNumber}'}</text>
+              <text x="94" y="332" fontSize="16">{"${data.SteelSealNumber ?? ''}"}</text>
               <line x1="94" y1="336" x2="410" y2="336" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="368" fontSize="16">数量</text>
-              <text x="94" y="368" fontSize="16">{'${data.Amount}'}</text>
+              <text x="94" y="368" fontSize="16">{"${data.Amount ?? ''}"}</text>
               <line x1="94" y1="372" x2="410" y2="372" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="404" fontSize="16">操作工</text>
-              <text x="94" y="404" fontSize="16">{'${data.UserName}'}</text>
+              <text x="94" y="404" fontSize="16">{"${data.UserName ?? ''}"}</text>
               <line x1="94" y1="408" x2="410" y2="408" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="440" fontSize="16">检验结论</text>
-              <text x="94" y="440" fontSize="16">{'${data.Result}'}</text>
+              <text x="94" y="440" fontSize="16">{"${data.Result ?? ''}"}</text>
               <line x1="94" y1="444" x2="410" y2="444" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="476" fontSize="16">生产日期</text>
-              <text x="94" y="476" fontSize="16">{'${data.ProductionDate}'}</text>
+              <text x="94" y="476" fontSize="16">{"${data.ProductionDate ?? ''}"}</text>
               <line x1="94" y1="480" x2="410" y2="480" stroke="#000000" strokeWidth="2" />
             </g>
           </svg>
@@ -255,54 +255,54 @@ function App() {
                 fontSize="16">宁波途兴汽车部件有限公司</text>
               <text fontWeight="800" x="225" y="76" dominantBaseline="middle" textAnchor="middle" fontSize="18">不良品标识卡</text>
 
-              <text x="436" y="144" fontSize="15" textAnchor="end">{'${data.Code}'}</text>
+              <text x="436" y="144" fontSize="15" textAnchor="end">{"${data.Code ?? ''}"}</text>
 
               <text x="20" y="132" fontSize="16">炉号</text>
-              <text x="64" y="132" fontSize="16">{'${data.HeatNumber}'}</text>
+              <text x="64" y="132" fontSize="16">{"${data.HeatNumber ?? ''}"}</text>
 
               <text x="20" y="188" fontSize="16">生产车间</text>
-              <text x="104" y="188" fontSize="16">{'${data.WorkshopName}'}</text>
+              <text x="104" y="188" fontSize="16">{"${data.WorkshopName ?? ''}"}</text>
               <line x1="104" y1="192" x2="210" y2="192" stroke="#000000" strokeWidth="2" />
               <text x="216" y="188" fontSize="16">班次</text>
-              <text x="286" y="188" fontSize="16">{'${data.ShiftName}'}</text>
+              <text x="286" y="188" fontSize="16">{"${data.ShiftName ?? ''}"}</text>
               <line x1="286" y1="192" x2="410" y2="192" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="224" fontSize="16">产品名称</text>
-              <text x="104" y="224" fontSize="16">{'${data.ProductName}'}</text>
+              <text x="104" y="224" fontSize="16">{"${data.ProductName ?? ''}"}</text>
               <line x1="104" y1="228" x2="210" y2="228" stroke="#000000" strokeWidth="2" />
               <text x="216" y="224" fontSize="16">图号</text>
-              <text x="286" y="224" fontSize="16">{'${data.ProductDrawingNumber}'}</text>
+              <text x="286" y="224" fontSize="16">{"${data.ProductDrawingNumber ?? ''}"}</text>
               <line x1="286" y1="228" x2="410" y2="228" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="260" fontSize="16">本道工序</text>
-              <text x="104" y="260" fontSize="16">{'${data.CurrentProcessName}'}</text>
+              <text x="104" y="260" fontSize="16">{"${data.CurrentProcessName ?? ''}"}</text>
               <line x1="104" y1="264" x2="210" y2="264" stroke="#000000" strokeWidth="2" />
               <text x="216" y="260" fontSize="16">下道工序</text>
-              <text x="286" y="260" fontSize="16">{'${data.NextProcessName}'}</text>
+              <text x="286" y="260" fontSize="16">{"${data.NextProcessName ?? ''}"}</text>
               <line x1="286" y1="264" x2="410" y2="264" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="296" fontSize="16">生产批次</text>
-              <text x="104" y="296" fontSize="16">{'${data.Lot}'}</text>
+              <text x="104" y="296" fontSize="16">{"${data.Lot ?? ''}"}</text>
               <line x1="104" y1="300" x2="410" y2="300" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="332" fontSize="16">钢印号</text>
-              <text x="104" y="332" fontSize="16">{'${data.SteelSealNumber}'}</text>
+              <text x="104" y="332" fontSize="16">{"${data.SteelSealNumber ?? ''}"}</text>
               <line x1="104" y1="336" x2="410" y2="336" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="368" fontSize="16">数量</text>
-              <text x="104" y="368" fontSize="16">{'${data.Amount}'}</text>
+              <text x="104" y="368" fontSize="16">{"${data.Amount ?? ''}"}</text>
               <line x1="104" y1="372" x2="410" y2="372" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="404" fontSize="16">操作工</text>
-              <text x="104" y="404" fontSize="16">{'${data.UserName}'}</text>
+              <text x="104" y="404" fontSize="16">{"${data.UserName ?? ''}"}</text>
               <line x1="104" y1="408" x2="410" y2="408" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="440" fontSize="16">不合格原因</text>
-              <text x="104" y="440" fontSize="16">{'${data.DefectTypeName}'}</text>
+              <text x="104" y="440" fontSize="16">{"${data.DefectTypeName ?? ''}"}</text>
               <line x1="104" y1="444" x2="410" y2="444" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="476" fontSize="16">生产日期</text>
-              <text x="104" y="476" fontSize="16">{'${data.ProductionDate}'}</text>
+              <text x="104" y="476" fontSize="16">{"${data.ProductionDate ?? ''}"}</text>
               <line x1="104" y1="480" x2="410" y2="480" stroke="#000000" strokeWidth="2" />
             </g>
           </svg>
@@ -327,40 +327,40 @@ function App() {
                 fontSize="16">宁波途兴汽车部件有限公司</text>
               <text fontWeight="800" x="225" y="76" dominantBaseline="middle" textAnchor="middle" fontSize="18">首件送检条码</text>
 
-              <text x="436" y="144" fontSize="15" textAnchor="end">{'${data.Code}'}</text>
+              <text x="436" y="144" fontSize="15" textAnchor="end">{"${data.Code ?? ''}"}</text>
 
               <text x="20" y="186" fontSize="16">生产车间</text>
-              <text x="90" y="186" fontSize="16">{'${data.WorkshopName}'}</text>
+              <text x="90" y="186" fontSize="16">{"${data.WorkshopName ?? ''}"}</text>
               <line x1="90" y1="190" x2="226" y2="190" stroke="#000000" strokeWidth="2" />
               <text x="232" y="186" fontSize="16">班次</text>
-              <text x="270" y="186" fontSize="16">{'${data.ShiftName}'}</text>
+              <text x="270" y="186" fontSize="16">{"${data.ShiftName ?? ''}"}</text>
               <line x1="270" y1="190" x2="410" y2="190" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="230" fontSize="16">产品名称</text>
-              <text x="90" y="230" fontSize="16">{'${data.ProductName}'}</text>
+              <text x="90" y="230" fontSize="16">{"${data.ProductName ?? ''}"}</text>
               <line x1="90" y1="236" x2="226" y2="236" stroke="#000000" strokeWidth="2" />
               <text x="232" y="230" fontSize="16">图号</text>
-              <text x="270" y="230" fontSize="16">{'${data.ProductDrawingNumber}'}</text>
+              <text x="270" y="230" fontSize="16">{"${data.ProductDrawingNumber ?? ''}"}</text>
               <line x1="270" y1="236" x2="410" y2="236" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="280" fontSize="16">本道工序</text>
-              <text x="90" y="280" fontSize="16">{'${data.CurrentProcessName}'}</text>
+              <text x="90" y="280" fontSize="16">{"${data.CurrentProcessName ?? ''}"}</text>
               <line x1="90" y1="284" x2="410" y2="284" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="330" fontSize="16">钢印号</text>
-              <text x="90" y="330" fontSize="16">{'${data.SteelSealNumber}'}</text>
+              <text x="90" y="330" fontSize="16">{"${data.SteelSealNumber ?? ''}"}</text>
               <line x1="90" y1="334" x2="410" y2="334" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="380" fontSize="16">送检单位</text>
-              <text x="90" y="380" fontSize="16">{'${data.WorkcenterName}'}</text>
+              <text x="90" y="380" fontSize="16">{"${data.WorkcenterName ?? ''}"}</text>
               <line x1="90" y1="384" x2="410" y2="384" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="430" fontSize="16">操作工</text>
-              <text x="90" y="430" fontSize="16">{'${data.UserName}'}</text>
+              <text x="90" y="430" fontSize="16">{"${data.UserName ?? ''}"}</text>
               <line x1="90" y1="436" x2="410" y2="436" stroke="#000000" strokeWidth="2" />
 
               <text x="20" y="480" fontSize="16">送检时间</text>
-              <text x="90" y="480" fontSize="16">{'${data.Date}'}</text>
+              <text x="90" y="480" fontSize="16">{"${data.Date ?? ''}"}</text>
               <line x1="90" y1="484" x2="410" y2="484" stroke="#000000" strokeWidth="2" />
             </g>
           </svg>
@@ -386,30 +386,30 @@ function App() {
               <text fontWeight="800" x="225" y="64" dominantBaseline="middle" textAnchor="middle"
                 fontSize="32">物料标识卡</text>
 
-              <text x="24" y="154" fontSize="20">名称</text>
-              <text x="70" y="154" fontSize="20">{'${data.ProductName}'}</text>
-              <line x1="70" y1="158" x2="170" y2="158" stroke="#000000" strokeWidth="2" />
-              <text x="174" y="154" fontSize="20">图号</text>
-              <text x="220" y="154" fontSize="20">{'${data.ProductDrawingNumber}'}</text>
-              <line x1="220" y1="158" x2="350" y2="158" stroke="#000000" strokeWidth="2" />
+              <text x="24" y="154" fontSize="16">名称</text>
+              <text x="76" y="154" fontSize="14" transform='scale(0.8, 1)'>{"${data.ProductName ?? ''}"}</text>
+              <line x1="60" y1="158" x2="204" y2="158" stroke="#000000" strokeWidth="2" />
+              <text x="210" y="154" fontSize="16">图号</text>
+              <text x="250" y="154" fontSize="14">{"${data.ProductDrawingNumber ?? ''}"}</text>
+              <line x1="250" y1="158" x2="350" y2="158" stroke="#000000" strokeWidth="2" />
 
-              <text x="24" y="194" fontSize="20">钢印号</text>
-              <text x="88" y="194" fontSize="20">{'${data.SteelSealNumber}'}</text>
-              <line x1="88" y1="198" x2="350" y2="198" stroke="#000000" strokeWidth="2" />
+              <text x="24" y="194" fontSize="16">钢印号</text>
+              <text x="78" y="194" fontSize="14">{"${data.SteelSealNumber ?? ''}"}</text>
+              <line x1="78" y1="198" x2="350" y2="198" stroke="#000000" strokeWidth="2" />
 
-              <text x="24" y="234" fontSize="20">数量</text>
-              <text x="70" y="234" fontSize="20">{'${data.Amount}'}</text>
-              <line x1="70" y1="238" x2="170" y2="238" stroke="#000000" strokeWidth="2" />
-              <text x="174" y="234" fontSize="20">批次</text>
-              <text x="220" y="234" fontSize="20">{'${data.Lot}'}</text>
-              <line x1="220" y1="238" x2="350" y2="238" stroke="#000000" strokeWidth="2" />
+              <text x="24" y="234" fontSize="16">数量</text>
+              <text x="64" y="234" fontSize="14">{"${data.Amount ?? ''}"}</text>
+              <line x1="64" y1="238" x2="204" y2="238" stroke="#000000" strokeWidth="2" />
+              <text x="210" y="234" fontSize="16">批次</text>
+              <text x="250" y="234" fontSize="14">{"${data.Lot ?? ''}"}</text>
+              <line x1="250" y1="238" x2="350" y2="238" stroke="#000000" strokeWidth="2" />
 
-              <text x="24" y="274" fontSize="20">供应商</text>
-              <text x="90" y="274" fontSize="20">{'${data.SupplierName}'}</text>
-              <line x1="90" y1="278" x2="170" y2="278" stroke="#000000" strokeWidth="2" />
-              <text x="174" y="274" fontSize="20">生产日期</text>
-              <text x="258" y="274" fontSize="20">{'${data.ProductionDate}'}</text>
-              <line x1="258" y1="278" x2="350" y2="278" stroke="#000000" strokeWidth="2" />
+              <text x="24" y="274" fontSize="16">供应商</text>
+              <text x="78" y="274" fontSize="14">{"${data.SupplierName ?? ''}"}</text>
+              <line x1="78" y1="278" x2="204" y2="278" stroke="#000000" strokeWidth="2" />
+              <text x="210" y="274" fontSize="16">生产日期</text>
+              <text x="278" y="274" fontSize="14">{"${data.ProductionDate ?? ''}"}</text>
+              <line x1="278" y1="278" x2="350" y2="278" stroke="#000000" strokeWidth="2" />
 
               <text x="384" y="116" fontSize="24">建</text>
               <text x="384" y="156" fontSize="24">新</text>
@@ -455,22 +455,22 @@ function App() {
               <line x1="360" y1="58" x2="360" y2="275" stroke="#000000" strokeWidth="1" />
 
               <text x='38' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>日期</text>
-              <text x='112' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.ProductionDate}"}</text>
+              <text x='112' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.ProductionDate ?? ''}"}</text>
 
               <text x='38' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>生产批次</text>
-              <text x='112' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Lot}"}</text>
+              <text x='112' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Lot ?? ''}"}</text>
 
               <text x='183' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>物料编码</text>
-              <text x='258' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.ProductCode}"}</text>
+              <text x='258' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.ProductCode ?? ''}"}</text>
 
               <text x='183' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>数量</text>
-              <text x='258' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Amount}"}</text>
+              <text x='258' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Amount ?? ''}"}</text>
 
               <text x='334' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>物料名称</text>
-              <text x='398' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.ProductName}"}</text>
+              <text x='498' y='74' dominantBaseline="middle" textAnchor="middle" fontSize='8' transform='scale(0.8, 1)'>{"${data.ProductName ?? ''}"}</text>
 
               <text x='334' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>产品图号</text>
-              <text x='398' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.ProductDrawingNumber}"}</text>
+              <text x='398' y='98' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.ProductDrawingNumber ?? ''}"}</text>
 
               <text x='112' y='122' dominantBaseline="middle" textAnchor="middle" fontSize='8'>流转工序</text>
               <text x='182' y='122' dominantBaseline="middle" textAnchor="middle" fontSize='8'>订单号</text>
@@ -482,22 +482,22 @@ function App() {
               <text x='38' y='122' dominantBaseline="middle" textAnchor="middle" fontSize='8'>序号</text>
 
               <text x='38' y='146' dominantBaseline="middle" textAnchor="middle" fontSize='8'>1</text>
-              <text x='112' y='146' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[0] || ''}"}</text>
+              <text x='112' y='146' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[0] ?? ''}"}</text>
 
               <text x='38' y='170' dominantBaseline="middle" textAnchor="middle" fontSize='8'>2</text>
-              <text x='112' y='170' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[1] || ''}"}</text>
+              <text x='112' y='170' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[1] ?? ''}"}</text>
 
               <text x='38' y='194' dominantBaseline="middle" textAnchor="middle" fontSize='8'>3</text>
-              <text x='112' y='194' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[2] || ''}"}</text>
+              <text x='112' y='194' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[2] ?? ''}"}</text>
 
               <text x='38' y='218' dominantBaseline="middle" textAnchor="middle" fontSize='8'>4</text>
-              <text x='112' y='218' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[3] || ''}"}</text>
+              <text x='112' y='218' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[3] ?? ''}"}</text>
 
               <text x='38' y='242' dominantBaseline="middle" textAnchor="middle" fontSize='8'>5</text>
-              <text x='112' y='242' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[4] || ''}"}</text>
+              <text x='112' y='242' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[4] ?? ''}"}</text>
 
               <text x='38' y='266' dominantBaseline="middle" textAnchor="middle" fontSize='8'>6</text>
-              <text x='112' y='266' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[5] || ''}"}</text>
+              <text x='112' y='266' dominantBaseline="middle" textAnchor="middle" fontSize='8'>{"${data.Process[5] ?? ''}"}</text>
 
               <text x="20" y="292" fontSize="7">送货单位/送货人：</text>
               <text x="250" y="292" fontSize="7">送货单位/送货人：</text>
@@ -513,25 +513,25 @@ function App() {
             <g fontWeight="900" fontFamily="微软雅黑" fill="#000000">
               <text transform='scale(.9 1)' x="225" y="54" dominantBaseline="middle" textAnchor="middle" fontSize="34">底盘供应商标签</text>
 
-              <text transform='scale(.9 1)' x="26" y="112" fontSize="28">采购订单：{"${data.ERPCode}"}</text>
+              <text transform='scale(.9 1)' x="26" y="112" fontSize="28">采购订单：{"${data.ERPCode ?? ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="152" fontSize="28">物料号：{"${data.ProductCode}"}</text>
+              <text transform='scale(.9 1)' x="26" y="152" fontSize="28">物料号：{"${data.ProductCode ?? ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="192" fontSize="28">{"${data.ProductName?.split('-')[0]}-"}</text>
-              <text transform='scale(.9 1)' x="26" y="218" fontSize="28">{"${data.ProductName?.split('-')[1]}"}</text>
+              <text transform='scale(.9 1)' x="26" y="192" fontSize="28">{"${data.ProductName?.split('-')?.[0] ?? ''}-"}</text>
+              <text transform='scale(.9 1)' x="26" y="218" fontSize="28">{"${data.ProductName?.split('-')?.[1] ?? ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="258" fontSize="28">生产日期：{"${data.ProductionDate}"}</text>
+              <text transform='scale(.9 1)' x="26" y="258" fontSize="28">生产日期：{"${data.ProductionDate ?? ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="298" fontSize="28">批次：{"${data.Lot}"}</text>
+              <text transform='scale(.9 1)' x="26" y="298" fontSize="28">批次：{"${data.Lot ?? ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="338" fontSize="28">炉号：{"${data.HeatNumber}"}</text>
-              <text transform='scale(.9 1)' x="253" y="338" fontSize="28">数量：{"${data.Amount}${data.UnitName}"}</text>
+              <text transform='scale(.9 1)' x="26" y="338" fontSize="28">炉号：{"${data.HeatNumber ?? ''}"}</text>
+              <text transform='scale(.9 1)' x="253" y="338" fontSize="28">数量：{"${data.Amount ?? ''}${data.UnitName ?? ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="380" fontSize="28">供应商：{"${data.Supplier}"}</text>
+              <text transform='scale(.9 1)' x="26" y="380" fontSize="28">供应商：{"${data.Supplier ?? ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="420" fontSize="28">生产地址：{"${data.Address || ''}"}</text>
+              <text transform='scale(.9 1)' x="26" y="420" fontSize="28">生产地址：{"${data.Address ?? '' || ''}"}</text>
 
-              <text transform='scale(.9 1)' x="26" y="460" fontSize="28">追溯号：{"${data.TraceCode}"}</text>
+              <text transform='scale(.9 1)' x="26" y="460" fontSize="28">追溯号：{"${data.TraceCode ?? ''}"}</text>
             </g>
 
             <svg x="135" y="510" width="180" height="180" shapeRendering="crispEdges" xmlns="http://www.w3.org/2000/svg"

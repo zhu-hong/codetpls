@@ -236,6 +236,7 @@ function App() {
             </g>
           </svg>
         </div>
+
         <h1>不良品标识卡（9x10）</h1>
 
         <div style={{ boxShadow: '0px 0px 20px 6px rgba(0,0,0,0.2)' }}>

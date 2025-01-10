@@ -1,21 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 720" shape-rendering="crispEdges" width="50mm" height="80mm">
-  <rect x="0" y="0" width="450" height="720" fill="#ffffff"></rect>
-  <g font-weight="900" font-family="微软雅黑" fill="#000000">
-    <text transform="scale(.9 1)" x="225" y="54" dominant-baseline="middle" text-anchor="middle" font-size="34">底盘供应商标签</text>
-    <text transform="scale(.9 1)" x="26" y="112" font-size="26">采购订单：${data.ERPCode ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="152" font-size="26">物料号：${data.ProductCode ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="192" font-size="26">${data.ProductName?.split('-')?.[0] ?? ''}-</text>
-    <text transform="scale(.9 1)" x="26" y="218" font-size="26">${data.ProductName?.split('-')?.[1] ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="258" font-size="26">生产日期：${data.ProductionDate ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="298" font-size="26">批次：${data.Lot ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="338" font-size="26">炉号：${data.HeatNumber ?? ''}</text>
-    <text transform="scale(.9 1)" x="253" y="338" font-size="26">数量：${data.Amount ?? ''}${data.UnitName ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="380" font-size="26">供应商：${data.Supplier ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="420" font-size="26">生产地址：${data.Address ?? ''}</text>
-    <text transform="scale(.9 1)" x="26" y="460" font-size="26">追溯号：${data.TraceCode ?? ''}</text>
-  </g>
-  <svg x="135" y="510" width="180" height="180" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 500" shape-rendering="crispEdges" width="90mm" height="100mm">
+  <rect x="0" y="0" width="450" height="500" fill="#ffffff"></rect>
+  <svg x="329" y="16" width="105" height="105" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
     <rect width="25" height="25" fill="#ffffff"></rect>
     <path fill="#000000" d="M0 0h7v1H0zM8 0h2v1H8zM11 0h1v1H11zM14 0h1v1H14zM18,0 h7v1H18zM0 1h1v1H0zM6 1h1v1H6zM8 1h2v1H8zM12 1h1v1H12zM16 1h1v1H16zM18 1h1v1H18zM24,1 h1v1H24zM0 2h1v1H0zM2 2h3v1H2zM6 2h1v1H6zM9 2h3v1H9zM14 2h3v1H14zM18 2h1v1H18zM20 2h3v1H20zM24,2 h1v1H24zM0 3h1v1H0zM2 3h3v1H2zM6 3h1v1H6zM8 3h1v1H8zM10 3h1v1H10zM18 3h1v1H18zM20 3h3v1H20zM24,3 h1v1H24zM0 4h1v1H0zM2 4h3v1H2zM6 4h1v1H6zM8 4h2v1H8zM12 4h1v1H12zM14 4h1v1H14zM18 4h1v1H18zM20 4h3v1H20zM24,4 h1v1H24zM0 5h1v1H0zM6 5h1v1H6zM8 5h1v1H8zM10 5h1v1H10zM12 5h2v1H12zM18 5h1v1H18zM24,5 h1v1H24zM0 6h7v1H0zM8 6h1v1H8zM10 6h1v1H10zM12 6h1v1H12zM14 6h1v1H14zM16 6h1v1H16zM18,6 h7v1H18zM9 7h1v1H9zM12 7h4v1H12zM3 8h1v1H3zM6 8h1v1H6zM9 8h2v1H9zM12 8h2v1H12zM15 8h1v1H15zM19 8h3v1H19zM23,8 h2v1H23zM4 9h1v1H4zM8 9h5v1H8zM17 9h1v1H17zM19 9h2v1H19zM22 9h1v1H22zM24,9 h1v1H24zM0 10h3v1H0zM5 10h3v1H5zM9 10h2v1H9zM13 10h1v1H13zM15 10h2v1H15zM18 10h3v1H18zM0 11h1v1H0zM2 11h3v1H2zM10 11h1v1H10zM16 11h1v1H16zM19 11h3v1H19zM0 12h2v1H0zM3 12h6v1H3zM11 12h2v1H11zM14 12h2v1H14zM18 12h1v1H18zM20 12h1v1H20zM22 12h1v1H22zM24,12 h1v1H24zM1 13h1v1H1zM3 13h2v1H3zM10 13h1v1H10zM15 13h3v1H15zM21 13h1v1H21zM23,13 h2v1H23zM0 14h1v1H0zM3 14h2v1H3zM6 14h3v1H6zM10 14h1v1H10zM14 14h1v1H14zM21 14h1v1H21zM23 14h1v1H23zM1 15h1v1H1zM5 15h1v1H5zM7 15h1v1H7zM10 15h4v1H10zM15 15h1v1H15zM17 15h3v1H17zM24,15 h1v1H24zM0 16h2v1H0zM3 16h2v1H3zM6 16h2v1H6zM9 16h2v1H9zM16 16h5v1H16zM24,16 h1v1H24zM8 17h1v1H8zM11 17h3v1H11zM15 17h2v1H15zM20 17h2v1H20zM23 17h1v1H23zM0 18h7v1H0zM9 18h2v1H9zM12 18h1v1H12zM14 18h1v1H14zM16 18h1v1H16zM18 18h1v1H18zM20 18h1v1H20zM22 18h2v1H22zM0 19h1v1H0zM6 19h1v1H6zM11 19h1v1H11zM13 19h2v1H13zM16 19h1v1H16zM20 19h1v1H20zM22,19 h3v1H22zM0 20h1v1H0zM2 20h3v1H2zM6 20h1v1H6zM10 20h1v1H10zM12 20h2v1H12zM15 20h6v1H15zM22 20h1v1H22zM24,20 h1v1H24zM0 21h1v1H0zM2 21h3v1H2zM6 21h1v1H6zM8 21h1v1H8zM11 21h2v1H11zM14 21h3v1H14zM18 21h2v1H18zM21 21h1v1H21zM23 21h1v1H23zM0 22h1v1H0zM2 22h3v1H2zM6 22h1v1H6zM9 22h1v1H9zM12 22h2v1H12zM15 22h2v1H15zM18 22h3v1H18zM24,22 h1v1H24zM0 23h1v1H0zM6 23h1v1H6zM9 23h2v1H9zM14 23h1v1H14zM19 23h3v1H19zM24,23 h1v1H24zM0 24h7v1H0zM9 24h1v1H9zM11 24h1v1H11zM16 24h3v1H16zM20 24h1v1H20zM22 24h1v1H22zM24,24 h1v1H24z"></path>
   </svg>
+  <g font-weight="800" font-family="微软雅黑" fill="#000000">
+    <text x="225" y="28" dominant-baseline="middle" text-anchor="middle" font-size="16">宁波途兴汽车部件有限公司</text>
+    <text x="225" y="62" dominant-baseline="middle" text-anchor="middle" font-size="18">委外工序标识卡</text>
+    <text x="20" y="100" font-size="14">炉号</text>
+    <text x="64" y="100" font-size="12">${data.HeatNumber ?? ''}</text>
+    <text x="20" y="120" font-size="14">供应商</text>
+    <text x="78" y="120" font-size="12">${data.SupplierName ?? ''}</text>
+    <text x="20" y="156" font-size="16">委外任务号</text>
+    <text x="106" y="156" font-size="14">${data.TaskCode ?? ''}</text>
+    <line x1="106" y1="160" x2="410" y2="160" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="196" font-size="16">产品名称</text>
+    <text x="134" y="196" font-size="16" transform="scale(0.8, 1)">${data.ProductName ?? ''}</text>
+    <line x1="106" y1="200" x2="410" y2="200" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="236" font-size="16">工序</text>
+    <text x="134" y="236" font-size="16" transform="scale(0.8, 1)">${data.ProcessName ?? ''}</text>
+    <line x1="106" y1="240" x2="410" y2="240" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="276" font-size="16">生产批次</text>
+    <text x="134" y="276" font-size="16" transform="scale(0.8, 1)">${data.Lot ?? ''}</text>
+    <line x1="106" y1="280" x2="410" y2="280" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="316" font-size="16">钢印号</text>
+    <text x="106" y="316" font-size="14">${data.SteelSealNumber ?? ''}</text>
+    <line x1="106" y1="320" x2="410" y2="320" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="356" font-size="16">数量</text>
+    <text x="106" y="356" font-size="14">${data.Amount ?? ''}</text>
+    <line x1="106" y1="360" x2="410" y2="360" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="396" font-size="16">操作工</text>
+    <text x="106" y="396" font-size="14">${data.UserName ?? ''}</text>
+    <line x1="106" y1="400" x2="410" y2="400" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="436" font-size="16">检验结论</text>
+    <text x="106" y="436" font-size="14">${data.Result ?? ''}</text>
+    <line x1="106" y1="440" x2="410" y2="440" stroke="#000000" stroke-width="2"></line>
+    <text x="20" y="476" font-size="16">生产日期</text>
+    <text x="106" y="476" font-size="14">${data.ProductionDate ?? ''}</text>
+    <line x1="106" y1="480" x2="410" y2="480" stroke="#000000" stroke-width="2"></line>
+  </g>
 </svg>

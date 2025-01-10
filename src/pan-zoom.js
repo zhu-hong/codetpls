@@ -146,20 +146,4 @@ export default class PanZoom {
   _update() {
     this._target.style.transform = `translate3d(${this._dx}px, ${this._dy}px, 0) scale(${this._scale})`;
   }
-
-  _dispose() {
-    this.reset()
-
-    document.removeEventListener('mousemove', this._onPointerMove);
-    document.removeEventListener('mouseup', this._onPointerUp);
-    document.removeEventListener('touchmove', this._onPointerMove);
-    document.removeEventListener('touchend', this._onPointerUp);
-
-    // bound events
-    this._eventArea.removeEventListener('mousedown', this._onPointerDown);
-    this._eventArea.removeEventListener('touchstart', this._onPointerDown);
-
-    // unbound
-    this._eventArea.removeEventListener('wheel', this._onWheel);
-  }
 }

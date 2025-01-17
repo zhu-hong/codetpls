@@ -6,17 +6,28 @@ function App() {
   const eventArea = useRef(null)
   const pz = useRef(null)
 
+  const live = useRef(null)
+
   useEffect(() => {
     if (pz.current === null) {
       pz.current = new Panzoom(ref.current, {
         eventArea: eventArea.current,
       })
     }
+
+    const jessibuca = new Jessibuca({
+      container: live.current,
+      hasAudio: false,
+      isFlv: true,
+    })
+
+    jessibuca.play('ws://60.12.218.160:25298/rtp/34020000001110000005_34020000001310000022.live.flv')
+    // ws://60.12.218.160:25298/rtp/34020000001110000005_34020000001310000022.live.flv
   }, [])
 
   return <div className="fixed top-0 bottom-0 left-0 right-0 overflow-hidden" ref={eventArea}>
     <div ref={ref} style={{ transformOrigin: '0 0' }}>
-      <div className='flex flex-col items-center gap-24px'>
+      {/* <div className='flex flex-col items-center gap-24px'>
         <h1>产品标识卡（20x10）</h1>
 
         <svg style={{ boxShadow: '0px 0px 20px 6px rgba(0,0,0,0.2)' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 225" shapeRendering="crispEdges" width="200mm" height="100mm">
@@ -583,7 +594,8 @@ function App() {
           </svg>
         </svg>
 
-      </div>
+      </div> */}
+      <div className='w-780px h-520px border border-black border-solid' ref={live}></div>
     </div>
   </div>
 }

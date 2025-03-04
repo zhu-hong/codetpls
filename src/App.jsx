@@ -28,20 +28,97 @@ function App() {
   const exportXlsx = () => {
     const workBook = xlsx.utils.book_new()
 
-    const appearance = xlsxData.xlsx.filter((x) => x.type === 0)
-    console.log(appearance)
-    appearance.map((a, i) => {
-      return [
-        i === 0 ? '外观' : null,
-      ]
-    })
-
-    const workSheet = xlsx.utils.json_to_sheet([
+    const data = [
       ['装配车间首件检验记录表（组装）', null, null, null, null, null, null, null],
-      ['销售订单：', null, '批号：', null, '规格型号：', '订单数量：', '日期：', '组别：'],
-      ['首件制作/确认开始时间', null, null, '', '', '检验依据及确认文件', null, null],
+      [`销售订单：${xlsxData.saleCode ?? 'placeholder'}`, null, `批号：${xlsxData.productBatch ?? 'placeholder'}`, null, `规格型号：${xlsxData.materialModel ?? 'placeholder'}`, `订单数量：${xlsxData.releaseQty ?? 'placeholder'}`, `日期：${xlsxData.endTime ?? 'placeholder'}`, `组别：${xlsxData.lineName ?? 'placeholder'}`],
+      ['首件制作/确认开始时间', null, null, xlsxData.textTime ?? 'placeholder', null, '检验依据及确认文件', null, null],
       ['检验类', '检验项目', null, '检查结果/结论', '确认结果/结论', null, null, null],
-    ], {
+    ]
+    data.push([
+      '用料',
+      xlsxData.materials.checkName,
+      null,
+      xlsxData.materials.checkResult ?? 'placeholder',
+      xlsxData.materials.confirmResult ?? 'placeholder',
+      null,
+      null,
+      null,
+    ])
+    xlsxData.appearanceList.forEach((a, i) => {
+      data.push([
+        i === 0 ? '外观' : null,
+        a.checkName ?? 'placeholder',
+        null,
+        a.checkResult ?? 'placeholder',
+        a.confirmResult ?? 'placeholder',
+        null,
+        null,
+        null,
+      ])
+    })
+    data.push([
+      '功能',
+      '参数',
+      '标准值',
+      '生产实测值',
+      '品质实测值',
+      '检验依据及确认文件',
+      null,
+      null,
+    ])
+    xlsxData.functionList.forEach((f) => {
+      data.push([
+        null,
+        f.checkName ?? 'placeholder',
+        f.standards ?? 'placeholder',
+        f.realitySizes ?? 'placeholder',
+        null,
+        null,
+        null,
+        null,
+      ])
+    })
+    data.push([
+      '过程要素',
+      '生产工艺',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+    ])
+    data.push([
+      'null',
+      '过程变更',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+    ])
+    data.push([
+      '制作/确认完成时间：',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+    ])
+    data.push([
+      '制作/确认人',
+      null,
+      null,
+      '组长：',
+      'IPQC：',
+      null,
+      null,
+      null,
+    ])
+    const workSheet = xlsx.utils.json_to_sheet(data, {
       skipHeader: true,
     })
 
@@ -84,6 +161,30 @@ function App() {
       {
         hpx: 50,
       },
+      {
+        hpx: 50,
+      },
+      ...xlsxData.appearanceList.map((_, i) => ({
+        hpx: 50,
+      })),
+      {
+        hpx: 50,
+      },
+      ...xlsxData.functionList.map((_, i) => ({
+        hpx: 50,
+      })),
+      {
+        hpx: 50,
+      },
+      {
+        hpx: 50,
+      },
+      {
+        hpx: 50,
+      },
+      {
+        hpx: 50,
+      },
     ]
     workSheet['!merges'] = [
       // 装配车间首件检验记录表（组装）
@@ -106,6 +207,11 @@ function App() {
         s: { r: 2, c: 0 },
         e: { r: 2, c: 2 },
       },
+      // 首件制作/确认开始时间 值
+      {
+        s: { r: 2, c: 3 },
+        e: { r: 2, c: 4 },
+      },
       // 检验依据及确认文件
       {
         s: { r: 2, c: 5 },
@@ -115,6 +221,69 @@ function App() {
       {
         s: { r: 3, c: 1 },
         e: { r: 3, c: 2 },
+      },
+      // 用料
+      {
+        s: { r: 4, c: 1 },
+        e: { r: 4, c: 2 },
+      },
+      // 外观
+      {
+        s: { r: 5, c: 0 },
+        e: { r: 5 + xlsxData.appearanceList.length - 1, c: 0 },
+      },
+      // 外观项
+      ...xlsxData.appearanceList.map((_, i) => ({
+        s: { r: 5 + i, c: 1 },
+        e: { r: 5 + i, c: 2 },
+      })),
+      // 检验依据及确认文件1
+      {
+        s: { r: 4, c: 5 },
+        e: { r: 4 + xlsxData.appearanceList.length, c: 7 },
+      },
+      // 检验依据及确认文件
+      {
+        s: { r: 4 + 1 + xlsxData.appearanceList.length, c: 5 },
+        e: { r: 4 + 1 + xlsxData.appearanceList.length, c: 7 },
+      },
+      // 功能
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1, c: 0 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length, c: 0 },
+      },
+      // 检验依据及确认文件2
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1 + 1, c: 5 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length, c: 7 },
+      },
+      // 过程要素
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1, c: 0 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 1, c: 0 },
+      },
+      // 过程要素项
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1, c: 1 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1, c: 2 },
+      },
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 1, c: 1 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 1, c: 2 },
+      },
+      //
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1, c: 5 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 1, c: 7 },
+      },
+      // 制作/确认完成时间：
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 2, c: 0 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 2, c: 2 },
+      },
+      {
+        s: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 3, c: 0 },
+        e: { r: 4 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 3, c: 2 },
       },
     ]
 
@@ -193,6 +362,17 @@ function App() {
         horizontal: 'center',
       },
     }
+    workSheet['D3'].s = {
+      font: {
+        sz: 20,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+      },
+    }
     workSheet['F3'].s = {
       font: {
         sz: 20,
@@ -248,6 +428,157 @@ function App() {
         horizontal: 'center',
       },
     }
+    workSheet['A5'].s = {
+      font: {
+        sz: 20,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+      },
+    }
+    workSheet['B5'].s = {
+      font: {
+        sz: 20,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+      },
+    }
+    workSheet['D5'].s = {
+      font: {
+        sz: 20,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+      },
+    }
+    workSheet['E5'].s = {
+      font: {
+        sz: 20,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+      },
+    }
+    workSheet['A6'].s = {
+      font: {
+        sz: 20,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+      },
+    }
+
+    ;(['B', 'D', 'E']).forEach((c) => {
+      xlsxData.appearanceList.forEach((_, ri) => {
+        workSheet[`${c}${6 + ri}`].s = {
+          font: {
+            sz: 20,
+            name: '宋体',
+            bold: true,
+          },
+          alignment: {
+            vertical: 'center',
+            horizontal: 'center',
+          },
+        }
+      })
+    })
+
+    ;(['A', 'B', 'C', 'D', 'E', 'F']).forEach((c) => {
+      workSheet[`${c}${4 + 1 + xlsxData.appearanceList.length + 1}`].s = {
+        font: {
+          sz: 20,
+          name: '宋体',
+          bold: true,
+        },
+        alignment: {
+          vertical: 'center',
+          horizontal: 'center',
+        },
+      }
+    })
+
+    ;(['B', 'C', 'D', 'E']).forEach((c) => {
+      xlsxData.functionList.forEach((_, ri) => {
+        workSheet[`${c}${5 + xlsxData.appearanceList.length + 2 + ri}`].s = {
+          font: {
+            sz: 20,
+            name: '宋体',
+            bold: true,
+          },
+          alignment: {
+            vertical: 'center',
+            horizontal: 'center',
+          },
+        }
+      })
+    })
+
+    ;(['A', 'B']).forEach((c) => {
+      workSheet[`${c}${5 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1}`].s = {
+        font: {
+          sz: 20,
+          name: '宋体',
+          bold: true,
+        },
+        alignment: {
+          vertical: 'center',
+          horizontal: 'center',
+        },
+      }
+      workSheet[`${c}${5 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 2}`].s = {
+        font: {
+          sz: 20,
+          name: '宋体',
+          bold: true,
+        },
+        alignment: {
+          vertical: 'center',
+          horizontal: 'center',
+        },
+      }
+    })
+
+    ;(['A', 'D', 'E']).forEach((c) => {
+      workSheet[`${c}${5 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 1 + 2}`].s = {
+        font: {
+          sz: 20,
+          name: '宋体',
+          bold: true,
+        },
+        alignment: {
+          vertical: 'center',
+          horizontal: 'center',
+        },
+      }
+      workSheet[`${c}${5 + xlsxData.appearanceList.length + 1 + xlsxData.functionList.length + 2 + 2}`].s = {
+        font: {
+          sz: 20,
+          name: '宋体',
+          bold: true,
+        },
+        alignment: {
+          vertical: 'center',
+          horizontal: c === 'A' ? 'center' : undefined,
+        },
+      }
+    })
 
     xlsx.utils.book_append_sheet(workBook, workSheet, 'sheet')
 

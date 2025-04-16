@@ -1,197 +1,131 @@
 {
-  "saleCode": "C-KJ24102501",
-  "productBatch": null,
-  "materialModel": "植毛+激光刻",
-  "releaseQty": 13050,
-  "endTime": "2025-02-18 11:00:09",
-  "lineName": "组9（4-4）",
-  "textTime": "2025-02-18 10:58:45",
-  "materials": {
-    "checkName": "用料",
-    "checkResult": 1,
-    "confirmResult": null,
-    "standards": null,
-    "realitySizes": null
-  },
-  "textMan": "管理员",
-  "appearanceList": [
-    {
-      "checkName": "产品质量履历",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "外观质量",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "喷涂/LOGO附着力",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "零件固定",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "配合",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "按钮粘合度",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "焊接质量",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "杂物",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "电池型号及标识",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    }
-  ],
-  "functionList": [
-    {
-      "checkName": "电机转速(rpm)",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "工作电流(mA)",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "静耗(μA)",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "充电电流(mA)",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "压力感应",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "工作电压(V)",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "使用功能",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "防水",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    }
-  ],
-  "confirmCheckList": [
-    "静耗(μA)",
-    "工作电流(mA)",
-    "电机转速(rpm)",
-    "充电电流(mA)"
-  ],
-  "tailConfirmList": [
-    {
-      "checkName": "用料是否和首件一致",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "喷涂/LOGO是否与首件一致",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "配合是否符合要求",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "零件固定是否符合检验要求",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "外观质量是否符合标准要求",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "使用功能是否与首件一致",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    },
-    {
-      "checkName": "制作/确认完成日期/时间",
-      "checkResult": null,
-      "confirmResult": null,
-      "standards": null,
-      "realitySizes": null
-    }
-  ]
+    "saleCode": "C-KJ24102501",
+    "materialModel": "毛坯",
+    "createTime": "2025-04-15 12:17:00",
+    "deviceNumber": "SG-0903-Z063",
+    "teamClass": "A25D15",
+    "materials": null,
+    "textTime": null,
+    "endTime": null,
+    "textMan": null,
+    "ultimatelyCheckResult": 0,
+    "fromNo": "SGC-826-QR016",
+    "fromVersion": "A/2",
+    "checkItemVOList": [
+        {
+            "checkProjectName": "一段温度（℃）",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "二段温度（℃）",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "热流道温度（℃）",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "周期（S)",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "射出一级压力",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "射出一级位置",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "射出二级压力",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "射出二级位置",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "射胶时间",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "冷却时间",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "保压压力",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "保压速度",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "保压时间(S)",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "附着力（包胶）",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "外观",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "颜色",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "混料",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "手感",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "试装",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "开模数/抽检数",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "合格数",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "合格率",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "判定（OK/NG）",
+            "standards": null,
+            "realitySizes": null
+        }
+    ]
 }

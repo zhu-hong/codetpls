@@ -29,20 +29,22 @@ function App() {
     const workBook = xlsx.utils.book_new()
 
     const data = [
-      ['注塑车间巡检表', null, null, null, null, null, null, null, null, null],
-      [`销售订单号：${xlsxData.saleCode || ''}`, null, null, `型号规格：${xlsxData.materialModel || ''}`, null, `日期：${xlsxData.endTime || ''}`, null, `机台：${xlsxData.deviceNumber || ''}`, `班次：${xlsxData.teamClass || ''}`, `用料：${xlsxData.materials || ''}`],
-      [`巡检开始时间（时：分）`, xlsxData.createTime ? xlsxData.createTime.split(' ')[1].split(':').slice(1).join(':') : '', null, null, null, null, null, null, null, null],
-      ['类别', '检验项', '标准值', '实际值', null, null, null, null, null, null],
-      ...xlsxData.checkItemVOList.map((c, i) => [
-        i === 0
-        ?
-        '参数检查'
-        :
-        null,
+      ['植毛车间首件记录表', null, null, null, null],
+      ['产品型号/规格：', `订单号：${xlsxData.saleCode || ''}`, '', `产品型号：${xlsxData.materialModel || ''}`, `批号：${xlsxData.productBatch || ''}`],
+      ['检验项目', '标准值', '领班确认结果', '巡检确认结果', '备注'],
+      ...xlsxData.checkItemList.map((c) => [
         c.checkProjectName,
         c.standards,
-        ...(c.realitySizes || []),
+        c.foremanCheckResult,
+        c.inspectionCheckResult,
+        c.checkRemark,
       ]),
+      ['异常处理记录：', null, null, null, null],
+      [`注：1、物料规格/实际参数由送检人填写；
+    2、确认结果，由品管人员根据订单要求进行确认；
+    3、销售订单要求业务确认的订单，品管确认后还需业务签字确认。`, null, null, null, null],
+      [`确认结果：            确认人：                  审核：                日期：${xlsxData.textTime}   
+                                                      表单编号：${xlsxData.fromNo} 版本/次：${xlsxData.fromVersion}`, null, null, null, null],
     ]
     const workSheet = xlsx.utils.json_to_sheet(data, {
       skipHeader: true,
@@ -50,69 +52,192 @@ function App() {
 
     workSheet['!cols'] = [
       {
-        wpx: 110,
+        wpx: 120,
       },
       {
-        wpx: 110,
+        wpx: 120,
       },
       {
-        wpx: 110,
+        wpx: 120,
       },
       {
-        wpx: 110,
+        wpx: 120,
       },
       {
-        wpx: 110,
-      },
-      {
-        wpx: 110,
-      },
-      {
-        wpx: 110,
-      },
-      {
-        wpx: 110,
-      },
-      {
-        wpx: 110,
-      },
-      {
-        wpx: 110,
+        wpx: 120,
       },
     ]
     workSheet['!rows'] = [
-
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 40,
+      },
+      {
+        hpx: 100,
+      },
+      {
+        hpx: 40,
+      },
     ]
     workSheet['!merges'] = [
       {
-        s: { r: 0, c: 0 },
-        e: { r: 0, c: 9 },
+        s: { r: 0, c: 0, },
+        e: { r: 0, c: 4, },
       },
       {
-        s: { r: 1, c: 0 },
-        e: { r: 1, c: 2 },
+        s: { r: 1, c: 1, },
+        e: { r: 1, c: 2, },
       },
       {
-        s: { r: 1, c: 3 },
-        e: { r: 1, c: 4 },
+        s: { r: 18, c: 0, },
+        e: { r: 18, c: 4, },
       },
       {
-        s: { r: 1, c: 5 },
-        e: { r: 1, c: 6 },
+        s: { r: 18 + 1, c: 0, },
+        e: { r: 18 + 1, c: 4, },
       },
       {
-        s: { r: 2, c: 0 },
-        e: { r: 2, c: 2 },
-      },
-      {
-        s: { r: 3, c: 3 },
-        e: { r: 3, c: 9 },
-      },
-      {
-        s: { r: 4, c: 0 },
-        e: { r: 4 + xlsxData.checkItemVOList.length - 1, c: 0 },
+        s: { r: 18 + 2, c: 0, },
+        e: { r: 18 + 2, c: 4, },
       },
     ]
+
+    Array.from({ length: 21 }).forEach((_, i) => {
+      const idx = i + 1
+      'abcde'.split('').map((l) => l.toUpperCase()).forEach((l) => {
+        workSheet[l+idx].s = {
+          font: {
+            sz: 14,
+            name: '宋体',
+          },
+          alignment: {
+            vertical: 'center',
+            horizontal: 'center',
+          },
+        }
+      })
+    })
+    workSheet['A1'].s = {
+      font: {
+        sz: 18,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+      },
+    }
+    workSheet['B2'].s = {
+      font: {
+        sz: 14,
+        name: '宋体',
+      },
+      alignment: {
+        vertical: 'center',
+      },
+    }
+    workSheet['D2'].s = {
+      font: {
+        sz: 14,
+        name: '宋体',
+      },
+      alignment: {
+        vertical: 'center',
+      },
+    }
+    workSheet['E2'].s = {
+      font: {
+        sz: 14,
+        name: '宋体',
+      },
+      alignment: {
+        vertical: 'center',
+      },
+    }
+    workSheet['A19'].s = {
+      font: {
+        sz: 14,
+        name: '宋体',
+      },
+      alignment: {
+        vertical: 'center',
+        wrapText: 1,
+      },
+    }
+    workSheet['A20'].s = {
+      font: {
+        sz: 14,
+        name: '宋体',
+      },
+      alignment: {
+        vertical: 'center',
+        wrapText: 1,
+      },
+    }
+    workSheet['A21'].s = {
+      font: {
+        sz: 14,
+        name: '宋体',
+      },
+      alignment: {
+        vertical: 'center',
+        wrapText: 1,
+      },
+    }
 
     xlsx.utils.book_append_sheet(workBook, workSheet, 'sheet')
 

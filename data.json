@@ -1,131 +1,115 @@
 {
-    "saleCode": "C-KJ24102501",
-    "materialModel": "毛坯",
-    "createTime": "2025-04-15 12:17:00",
-    "deviceNumber": "SG-0903-Z063",
-    "teamClass": "A25D15",
-    "materials": null,
-    "textTime": null,
-    "endTime": null,
-    "textMan": null,
-    "ultimatelyCheckResult": 0,
-    "fromNo": "SGC-826-QR016",
-    "fromVersion": "A/2",
-    "checkItemVOList": [
+    "saleCode": "植毛测试1",
+    "materialModel": "SG-H025B",
+    "productBatch": null,
+    "checkItemList": [
         {
-            "checkProjectName": "一段温度（℃）",
-            "standards": null,
-            "realitySizes": null
+            "checkProjectName": "用料",
+            "standards": "",
+            "foremanCheckResult": "1",
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "二段温度（℃）",
+            "checkProjectName": "刷柄颜色",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "热流道温度（℃）",
+            "checkProjectName": "整捆切毛",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "周期（S)",
+            "checkProjectName": "刷头切毛形状",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "射出一级压力",
+            "checkProjectName": "刷头切毛高度",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "射出一级位置",
+            "checkProjectName": "铜片长度/干涉",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "射出二级压力",
+            "checkProjectName": "刷毛磨圆率",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "射出二级位置",
+            "checkProjectName": "刷毛拉力",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "射胶时间",
+            "checkProjectName": "少毛",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "冷却时间",
+            "checkProjectName": "杂毛",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "保压压力",
+            "checkProjectName": "夹伤",
             "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "保压速度",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "保压时间(S)",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "附着力（包胶）",
-            "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
             "checkProjectName": "外观",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "颜色",
+            "checkProjectName": "焊接力",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "混料",
+            "checkProjectName": "插拔力",
             "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         },
         {
-            "checkProjectName": "手感",
+            "checkProjectName": "刷头与主题间间隙",
             "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "试装",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "开模数/抽检数",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "合格数",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "合格率",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "判定（OK/NG）",
-            "standards": null,
-            "realitySizes": null
+            "foremanCheckResult": null,
+            "inspectionCheckResult": null,
+            "checkRemark": null
         }
-    ]
+    ],
+    "fromNo": "SG-QR-147",
+    "fromVersion": "A/2",
+    "textTime": "2024-12-28 12:24:10"
 }

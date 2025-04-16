@@ -1,115 +1,127 @@
 {
-    "saleCode": "植毛测试1",
-    "materialModel": "SG-H025B",
+    "saleCode": "C-TZ24092601",
     "productBatch": null,
-    "checkItemList": [
-        {
-            "checkProjectName": "用料",
-            "standards": "",
-            "foremanCheckResult": "1",
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "刷柄颜色",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "整捆切毛",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "刷头切毛形状",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "刷头切毛高度",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "铜片长度/干涉",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "刷毛磨圆率",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "刷毛拉力",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "少毛",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "杂毛",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "夹伤",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
-        {
-            "checkProjectName": "外观",
-            "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
-        },
+    "materialModel": "SG-Z522",
+    "releaseQty": 5184,
+    "endTime": null,
+    "textTime": null,
+    "deviceNumber": null,
+    "textMan": null,
+    "fromNo": "SG-QR-102",
+    "fromVersion": "A/1",
+    "partsInspectionItemList": [
         {
             "checkProjectName": "焊接力",
             "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
+            "realitySizes": null
         },
         {
             "checkProjectName": "插拔力",
             "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
+            "realitySizes": null
         },
         {
-            "checkProjectName": "刷头与主题间间隙",
+            "checkProjectName": "刷头与主体间隙",
             "standards": null,
-            "foremanCheckResult": null,
-            "inspectionCheckResult": null,
-            "checkRemark": null
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "切毛高度（MM）",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "铜片尺寸(MM)",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "磨圆率（%）",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "整束拉力（N)",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "单根拉力（N)",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "刷丝规格型号",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "刷丝颜色分布",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "刷柄颜色",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "整捆切毛",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "切毛形状",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "磨盘",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "气枪位置",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "夹伤",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "外观",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "判定（OK/NG)",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "职位",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "姓名",
+            "standards": null,
+            "realitySizes": null
+        },
+        {
+            "checkProjectName": "巡检结束时间（时：分）",
+            "standards": null,
+            "realitySizes": null
         }
     ],
-    "fromNo": "SG-QR-147",
-    "fromVersion": "A/2",
-    "textTime": "2024-12-28 12:24:10"
+    "transitionPersonnel": null,
+    "inWarehouseQuantity": null,
+    "samplingQuantity": null,
+    "appearance": null,
+    "roundness": null,
+    "tensionBundle": null,
+    "singleBundle": null,
+    "ultimatelyCheckResult": 0
 }

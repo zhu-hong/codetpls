@@ -28,42 +28,73 @@ function App() {
   const exportXlsx = () => {
     const workBook = xlsx.utils.book_new()
 
+    function getResultText(status) {
+      const l = [
+        {
+          "value": "10",
+          "text": "合格",
+          "title": "合格"
+        },
+        {
+          "value": "1",
+          "text": "合格",
+          "title": "合格"
+        },
+        {
+          "value": "-1",
+          "text": "不合格",
+          "title": "不合格"
+        },
+        {
+          "value": "2",
+          "text": "不适用",
+          "title": "不适用"
+        }
+      ]
+
+      const target = l.find((l) => l.value == status)
+      if(!target) return ''
+
+      return target.text
+    }
+
     const data = [
-      ['植毛车间巡检记录表', null, null, null, null, null, null, null, null, null],
-      [`订单号：${xlsxData.saleCode}`, null, `批号：${xlsxData.productBatch || ''}`, null, `规格型号：${xlsxData.materialModel|| ''}`, null, null, `订单数量：${xlsxData.releaseQty}`, null, null],
-      [`作业指导书：`, null, null, `日期：${xlsxData.endTime||''}`, null, null, `机台：${xlsxData.deviceNumber||''}`, null, `作业员：${xlsxData.textMan}`, null],
-      [`巡检时间（时：分）`, xlsxData.textTime, null, null, null, null, null, null, null, null],
-      ['类别', '检验项目', '标准值', '实际值', null, null, null, null, null, null],
-      ['配件检验项', '焊接力', xlsxData.partsInspectionItemList[0].standards, ...(xlsxData.partsInspectionItemList[0].realitySizes || [])],
-      [null, '插拔力', xlsxData.partsInspectionItemList[1].standards, ...(xlsxData.partsInspectionItemList[1].realitySizes || [])],
-      [null, '刷头与主体间隙', xlsxData.partsInspectionItemList[2].standards, ...(xlsxData.partsInspectionItemList[2].realitySizes || [])],
-      ['性能项', '切毛高度（MM）', xlsxData.partsInspectionItemList[3].standards, ...(xlsxData.partsInspectionItemList[3].realitySizes || [])],
-      [null, '铜片尺寸(MM)', xlsxData.partsInspectionItemList[4].standards, ...(xlsxData.partsInspectionItemList[4].realitySizes || [])],
-      [null, '磨圆率（%）', xlsxData.partsInspectionItemList[5].standards, ...(xlsxData.partsInspectionItemList[5].realitySizes || [])],
-      [null, '整束拉力（N)', xlsxData.partsInspectionItemList[6].standards, ...(xlsxData.partsInspectionItemList[6].realitySizes || [])],
-      [null, '单根拉力（N)', xlsxData.partsInspectionItemList[7].standards, ...(xlsxData.partsInspectionItemList[7].realitySizes || [])],
-      ['目视项', '刷丝规格型号', xlsxData.partsInspectionItemList[8].standards, ...(xlsxData.partsInspectionItemList[8].realitySizes || [])],
-      [null, '刷丝颜色分布', xlsxData.partsInspectionItemList[9].standards, ...(xlsxData.partsInspectionItemList[9].realitySizes || [])],
-      [null, '刷柄颜色', xlsxData.partsInspectionItemList[10].standards, ...(xlsxData.partsInspectionItemList[10].realitySizes || [])],
-      [null, '整捆切毛', xlsxData.partsInspectionItemList[11].standards, ...(xlsxData.partsInspectionItemList[11].realitySizes || [])],
-      [null, '切毛形状', xlsxData.partsInspectionItemList[12].standards, ...(xlsxData.partsInspectionItemList[12].realitySizes || [])],
-      [null, '磨盘', xlsxData.partsInspectionItemList[13].standards, ...(xlsxData.partsInspectionItemList[13].realitySizes || [])],
-      [null, '气枪位置', xlsxData.partsInspectionItemList[14].standards, ...(xlsxData.partsInspectionItemList[14].realitySizes || [])],
-      [null, '夹伤', xlsxData.partsInspectionItemList[15].standards, ...(xlsxData.partsInspectionItemList[15].realitySizes || [])],
-      [null, '外观', xlsxData.partsInspectionItemList[16].standards, ...(xlsxData.partsInspectionItemList[16].realitySizes || [])],
-      ['判定（OK/NG)', null, null, null, null, null, null, null, null, null],
-      ['职位', null, null, null, null, null, null, null, null, null],
-      ['姓名', null, null, null, null, null, null, null, null, null],
-      ['巡检结束时间（时：分）', xlsxData.textTime, null, null, null, null, null, null, null, null],
-      ['异常处理记录：', null, null, null, null, null, null, null, null, null],
-      ['转序', '检验时间', '转序人员', '入库数量', '抽检数量', '外观', '磨圆率', '整束拉力', '单根拉力', '确认结果'],
-      [null, xlsxData.textTime, xlsxData.transitionPersonnel, xlsxData.inWarehouseQuantity, xlsxData.samplingQuantity, xlsxData.appearance, xlsxData.roundness, xlsxData.tensionBundle, xlsxData.singleBundle, xlsxData.ultimatelyCheckResult],
-      [`注： 
-1、检验正常的在项目后写上实测值或参数； 2、检验不正常的在项目后写上不良原因及不良数；
-3、拉力按检验规范检验，每批检验2-3模；4、当抽样超标后IPQC应在异常处理记录中记录处理过程。
-5、IPQC和组长： 4H/次 ；QA和车间主管 ：  每天/次。（多次换线时，只需在当时报表上填写记录）
-`, null, null, null, null, null, null, null, null, null],
-      [` 审核：                       日期：${xlsxData.endTime}                               表单编号：${xlsxData.fromNo} 版本：${xlsxData.fromVersion}`, null, null, null, null, null, null, null, null, null],
+      ['SMT首件确认记录表', null, null, null, null, null, null, null, null],
+      ['订单号', xlsxData.saleCode, '产品型号', xlsxData.materialModel, '线别', xlsxData.workshopName, '班别', xlsxData.lineName, '日期', xlsxData.textTime],
+      ['工序', '检查项目', null, null, null, '检查结果(OK/NG)', null, null, '不良情形/处理状况', null],
+      [null, null, null, null, null, '1', '2', '3', null, null],
+      ...xlsxData.beforeTheFurnaceVOList.map((b, i) => ([
+        i === 0 ? '炉前' : null,
+        `${i + 1}、` + b.checkProjectName + '____________。',
+        null,
+        null,
+        null,
+        ...b.checkResultList.slice(0, 3).map((r) => getResultText(r)),
+        null,
+        null,
+      ])),
+      ...xlsxData.aoiVoList.map((b, i) => ([
+        i === 0 ? 'AOI' : null,
+        `${i + 1}、` + b.checkProjectName + '____________。',
+        null,
+        null,
+        null,
+        ...b.checkResultList.slice(0, 3).map((r) => getResultText(r)),
+        null,
+        null,
+      ])),
+      ...xlsxData.functionTestVOList.map((b, i) => ([
+        i === 0 ? '功能测试' : null,
+        `${i + 1}、` + b.checkProjectName + '____________。',
+        null,
+        null,
+        null,
+        ...b.checkResultList.slice(0, 3).map((r) => getResultText(r)),
+        null,
+        null,
+      ])),
+      [`炉前自检：${getResultText(xlsxData.beforeTheFurnaceCheck)}          技术员确认：${getResultText(xlsxData.technicianConfirm)}          AOI自检：${getResultText(xlsxData.aoiCheck)}           QC确认：${getResultText(xlsxData.qcConfirm)}         。`, null, null, null, null, null, null, null, null,],
+      [`    审核：${getResultText(xlsxData.audit)}                   日期：${xlsxData.textTime || ''}                          表单编号：${xlsxData.fromNo}   ${xlsxData.fromVersion}`, null, null, null, null, null, null, null, null,],
     ]
     const workSheet = xlsx.utils.json_to_sheet(data, {
       skipHeader: true,
@@ -71,138 +102,214 @@ function App() {
 
     workSheet['!cols'] = [
       {
-        wpx: 132,
+        wpx: 96,
       },
       {
-        wpx: 132,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
       {
-        wpx: 84,
+        wpx: 96,
       },
     ]
     workSheet['!rows'] = [
       {
-        hpx: 40,
+        hpx: 36,
       },
-      ...Array.from({ length: 28 }).map(() => ({
-        hpx: 32,
-      })),{
-        hpx: 96,
-      },{
-        hpx: 32,
-      }
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
+      {
+        hpx: 24,
+      },
     ]
     workSheet['!merges'] = [
       {
-        s: { r: 0, c: 0, },
-        e: { r: 0, c: 9, },
+        s: { r: 0, c: 0 },
+        e: { r: 0, c: 9 },
       },
       {
-        s: { r: 1, c: 0, },
-        e: { r: 1, c: 1, },
+        s: { r: 2, c: 0 },
+        e: { r: 3, c: 0 },
       },
       {
-        s: { r: 1, c: 2, },
-        e: { r: 1, c: 3, },
+        s: { r: 2, c: 1 },
+        e: { r: 3, c: 4 },
       },
       {
-        s: { r: 1, c: 4, },
-        e: { r: 1, c: 6, },
+        s: { r: 2, c: 5 },
+        e: { r: 2, c: 7 },
       },
       {
-        s: { r: 1, c: 7, },
-        e: { r: 1, c: 9, },
+        s: { r: 2, c: 8 },
+        e: { r: 3, c: 9 },
       },
       {
-        s: { r: 2, c: 0, },
-        e: { r: 2, c: 2, },
+        s: { r: 4, c: 0 },
+        e: { r: 8, c: 0 },
       },
       {
-        s: { r: 2, c: 3, },
-        e: { r: 2, c: 5, },
+        s: { r: 9, c: 0 },
+        e: { r: 14, c: 0 },
       },
       {
-        s: { r: 2, c: 6, },
-        e: { r: 2, c: 7, },
+        s: { r: 15, c: 0 },
+        e: { r: 18, c: 0 },
       },
       {
-        s: { r: 2, c: 8, },
-        e: { r: 2, c: 9, },
+        s: { r: 4, c: 1 },
+        e: { r: 4, c: 4 },
       },
       {
-        s: { r: 4, c: 3, },
-        e: { r: 4, c: 9, },
+        s: { r: 5, c: 1 },
+        e: { r: 5, c: 4 },
       },
       {
-        s: { r: 5, c: 0, },
-        e: { r: 7, c: 0, },
+        s: { r: 6, c: 1 },
+        e: { r: 6, c: 4 },
       },
       {
-        s: { r: 8, c: 0, },
-        e: { r: 12, c: 0, },
+        s: { r: 7, c: 1 },
+        e: { r: 7, c: 4 },
       },
       {
-        s: { r: 13, c: 0, },
-        e: { r: 21, c: 0, },
+        s: { r: 8, c: 1 },
+        e: { r: 8, c: 4 },
       },
       {
-        s: { r: 22, c: 0, },
-        e: { r: 22, c: 1, },
+        s: { r: 9, c: 1 },
+        e: { r: 9, c: 4 },
       },
       {
-        s: { r: 23, c: 0, },
-        e: { r: 23, c: 1, },
+        s: { r: 10, c: 1 },
+        e: { r: 10, c: 4 },
       },
       {
-        s: { r: 24, c: 0, },
-        e: { r: 24, c: 1, },
+        s: { r: 11, c: 1 },
+        e: { r: 11, c: 4 },
       },
       {
-        s: { r: 25, c: 0, },
-        e: { r: 25, c: 1, },
+        s: { r: 12, c: 1 },
+        e: { r: 12, c: 4 },
       },
       {
-        s: { r: 26, c: 0, },
-        e: { r: 26, c: 9, },
+        s: { r: 13, c: 1 },
+        e: { r: 13, c: 4 },
       },
       {
-        s: { r: 27, c: 0, },
-        e: { r: 28, c: 0, },
+        s: { r: 14, c: 1 },
+        e: { r: 14, c: 4 },
       },
       {
-        s: { r: 29, c: 0, },
-        e: { r: 29, c: 9, },
+        s: { r: 15, c: 1 },
+        e: { r: 15, c: 4 },
       },
       {
-        s: { r: 30, c: 0, },
-        e: { r: 30, c: 9, },
+        s: { r: 16, c: 1 },
+        e: { r: 16, c: 4 },
+      },
+      {
+        s: { r: 17, c: 1 },
+        e: { r: 17, c: 4 },
+      },
+      {
+        s: { r: 18, c: 1 },
+        e: { r: 18, c: 4 },
+      },
+      {
+        s: { r: 4, c: 8 },
+        e: { r: 18, c: 9 },
+      },
+      {
+        s: { r: 4, c: 8 },
+        e: { r: 18, c: 9 },
+      },
+      {
+        s: { r: 19, c: 0 },
+        e: { r: 19, c: 9 },
+      },
+      {
+        s: { r: 20, c: 0 },
+        e: { r: 20, c: 9 },
       },
     ]
 
-    Array.from({ length: 31 }).forEach((_, i) => {
+    Array.from({ length: 21 }).forEach((_, i) => {
       const idx = i + 1
-      
       'abcdefghij'.split('').map((l) => l.toUpperCase()).forEach((l) => {
         if(workSheet[l+idx]) {
           workSheet[l+idx].s = {
@@ -212,7 +319,7 @@ function App() {
             },
             alignment: {
               vertical: 'center',
-              horizontal: 'center',
+              horizontal: 'left',
             },
           }
         }
@@ -220,7 +327,7 @@ function App() {
     })
     workSheet['A1'].s = {
       font: {
-        sz: 18,
+        sz: 22,
         name: '宋体',
         bold: true,
       },
@@ -229,107 +336,19 @@ function App() {
         horizontal: 'center',
       },
     }
-    workSheet['A2'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['C2'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['E2'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['H2'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['A3'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['D3'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['G3'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['I3'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['A27'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-      },
-    }
-    workSheet['A30'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-        wrapText: 1,
-      },
-    }
-    workSheet['A31'].s = {
-      font: {
-        sz: 14,
-        name: '宋体',
-      },
-      alignment: {
-        vertical: 'center',
-        wrapText: 1,
-      },
-    }
+    ;(['A3', 'B3', 'F3', 'F4', 'G4', 'H4', 'I3', 'A5', 'A10', 'A16']).forEach((c) => {
+      workSheet[c].s = {
+        font: {
+          sz: 14,
+          name: '宋体',
+          bold: true,
+        },
+        alignment: {
+          vertical: 'center',
+          horizontal: 'center',
+        },
+      }
+    })
 
     xlsx.utils.book_append_sheet(workBook, workSheet, 'sheet')
 

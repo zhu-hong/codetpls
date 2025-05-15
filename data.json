@@ -1,127 +1,215 @@
 {
-    "saleCode": "C-TZ24092601",
-    "productBatch": null,
-    "materialModel": "SG-Z522",
-    "releaseQty": 5184,
-    "endTime": null,
+    "saleCode": "SMT测试2",
+    "materialModel": "SG-542-03",
+    "workshopName": "SMT车间",
+    "lineName": "插件（4-2）",
     "textTime": null,
-    "deviceNumber": null,
-    "textMan": null,
-    "fromNo": "SG-QR-102",
-    "fromVersion": "A/1",
-    "partsInspectionItemList": [
+    "beforeTheFurnaceVOList": [
         {
-            "checkProjectName": "焊接力",
-            "standards": null,
-            "realitySizes": null
+            "checkProjectName": "PCB版本",
+            "checkResult": null,
+            "checkResultList": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                -1
+            ]
         },
         {
-            "checkProjectName": "插拔力",
-            "standards": null,
-            "realitySizes": null
+            "checkProjectName": "Chip零件之规格",
+            "checkResult": null,
+            "checkResultList": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
         },
         {
-            "checkProjectName": "刷头与主体间隙",
-            "standards": null,
-            "realitySizes": null
+            "checkProjectName": "IC零件之规格与极性。如有极反请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
         },
         {
-            "checkProjectName": "切毛高度（MM）",
-            "standards": null,
-            "realitySizes": null
+            "checkProjectName": "其它有方向零件之极性。如有极反请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
         },
         {
-            "checkProjectName": "铜片尺寸(MM)",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "磨圆率（%）",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "整束拉力（N)",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "单根拉力（N)",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "刷丝规格型号",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "刷丝颜色分布",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "刷柄颜色",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "整捆切毛",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "切毛形状",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "磨盘",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "气枪位置",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "夹伤",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "外观",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "判定（OK/NG)",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "职位",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "姓名",
-            "standards": null,
-            "realitySizes": null
-        },
-        {
-            "checkProjectName": "巡检结束时间（时：分）",
-            "standards": null,
-            "realitySizes": null
+            "checkProjectName": "零件之贴片工艺。如有缺陷请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
         }
     ],
-    "transitionPersonnel": null,
-    "inWarehouseQuantity": null,
-    "samplingQuantity": null,
-    "appearance": null,
-    "roundness": null,
-    "tensionBundle": null,
-    "singleBundle": null,
-    "ultimatelyCheckResult": 0
+    "aoiVoList": [
+        {
+            "checkProjectName": "PCB版本",
+            "checkResult": null,
+            "checkResultList": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                -1
+            ]
+        },
+        {
+            "checkProjectName": "Chip零件之规格。如有异常请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "checkProjectName": "IC零件之规格与极性。如有极反请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "checkProjectName": "其它有方向零件之极性。如有极反请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "checkProjectName": "零件之贴片工艺。如有缺陷请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "checkProjectName": "PCB炉后焊接状态。如有缺陷请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        }
+    ],
+    "functionTestVOList": [
+        {
+            "checkProjectName": "静耗是否正常。如有缺陷请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "checkProjectName": "工作电流是否正常。如有缺陷请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "checkProjectName": "指示灯是否正常。如有缺陷请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "checkProjectName": "充电电流是否正常。如有缺陷请记录",
+            "checkResult": null,
+            "checkResultList": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        }
+    ],
+    "beforeTheFurnaceCheck": 0,
+    "technicianConfirm": null,
+    "aoiCheck": null,
+    "qcConfirm": null,
+    "audit": null,
+    "fromNo": "SG-QR-212",
+    "fromVersion": "A/0"
 }

@@ -1,124 +1,172 @@
 {
-  "saleCode": "SMT测试2",
-  "materialModel": "SG-542-03",
-  "endTime": "2024-12-23 16:37:40",
-  "processType": "插件",
-  "deviceNumber": null,
-  "posts": null,
-  "textMan": "管理员",
-  "fromNo": "SG-QR-211",
-  "fromVersion": "A/1",
+  "saleCode": "C-WF24102401",
+  "materialModel": "喷漆",
+  "releaseQty": 3150,
+  "textMan": "韩亮亮",
+  "bakeWarmTime": null,
+  "paintingProcess": null,
+  "blendingRatio": null,
+  "textTime": "2024-11-15 14:59:07",
+  "fromNo": "SG-QR-146",
+  "fromVersion": "A/3",
   "ultimatelyCheckResult": 10,
-  "solderPastePrintingList": [
+  "materials": null,
+  "flowRate": null,
+  "testSprayList": [
     {
-      "checkProjectName": "锡膏是否先进先出原则领用，是否在室温下解冻4H，是否填写使用时间，领用及开盖后在24H内使用",
+      "checkProjectName": "百格测试",
       "standards": null,
       "realitySizes": null,
-      "checkResult": null
+      "checkResult": null,
+      "confirmCheckResult": null
     },
     {
-      "checkProjectName": "印锡膏之PCB板上未贴片不得在线上停留超过60分钟",
-      "standards": "",
+      "checkProjectName": "直接粘贴测试",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": null,
+      "confirmCheckResult": null
     },
     {
-      "checkProjectName": "使用前是否有搅拌3分钟，并按少量多次原则添加使用",
-      "standards": "",
+      "checkProjectName": "耐醇测试",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": null,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "膜厚测试",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "水煮测试",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "反粘测试",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null,
+      "confirmCheckResult": null
     }
   ],
-  "patchesList": [
+  "chromaticAberrationTestList": [
     {
-      "checkProjectName": "生产中途更换物料，调机优化必须经过组长、工程师、质控QC三方面先后确认后方可",
+      "checkProjectName": "A面",
       "standards": "",
       "realitySizes": null,
-      "checkResult": -1
+      "checkResult": 1,
+      "confirmCheckResult": null
     },
     {
-      "checkProjectName": "工作台面是否整洁、物品摆放是否整齐、散料是否用静电袋（盒）存放",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "上板机、印刷机、贴片机、AOI日、周、月点检保养记录是否按时完成",
+      "checkProjectName": "B面",
       "standards": "",
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": 1,
+      "confirmCheckResult": null
     },
     {
-      "checkProjectName": "在线站位表、工艺指导附件及贴片程序名是否与所生产机型名称一致",
+      "checkProjectName": "C面",
       "standards": "",
       "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "作业员拿板是否戴有静电环或静电手套",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
+      "checkResult": 1,
+      "confirmCheckResult": null
     }
   ],
-  "reflowSolderingList": [
+  "adhesionList": [
     {
-      "checkProjectName": "回流焊炉温及链速设置是否符合作业指导书及其附件的参数设定要求",
-      "standards": "",
+      "checkProjectName": "百格测试",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": null,
+      "confirmCheckResult": null
     },
     {
-      "checkProjectName": "生产检验员是否每小时进行功能测试并做好记录报表",
-      "standards": "",
+      "checkProjectName": "直接粘贴测试",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": null,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "耐醇测试",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "膜厚测试",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null,
+      "confirmCheckResult": null
     }
   ],
-  "aoiAutomaticallyDetectList": [
+  "visualInspectionList": [
     {
-      "checkProjectName": "经AOI检测的产品是否符合《贴片焊接检查判定标准》，AOI是否能正确的检测出良品不良品",
+      "checkProjectName": "透光检验",
       "standards": "",
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": 1,
+      "confirmCheckResult": null
     },
     {
-      "checkProjectName": "检测出的良品、不良品有无标识且区分放置",
+      "checkProjectName": "积油",
       "standards": "",
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": 1,
+      "confirmCheckResult": null
     },
     {
-      "checkProjectName": "作业员拿取PCB是否戴静电环，且轻拿轻放、不可推放、摔板、叠板",
+      "checkProjectName": "少油",
       "standards": "",
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": 1,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "飞油",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "脏污",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "哑色",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null,
+      "confirmCheckResult": null
+    },
+    {
+      "checkProjectName": "烧底",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1,
+      "confirmCheckResult": null
     }
   ],
-  "functionalTestingList": [
+  "sprayingPositionList": [
     {
-      "checkProjectName": "静耗",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "工作电流",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "充电电流",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "包装摆放是否符合要求",
+      "checkProjectName": "核对订单要求",
       "standards": "",
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": 1,
+      "confirmCheckResult": null
     }
   ]
 }

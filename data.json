@@ -1,215 +1,124 @@
 {
-    "saleCode": "SMT测试2",
-    "materialModel": "SG-542-03",
-    "workshopName": "SMT车间",
-    "lineName": "插件（4-2）",
-    "textTime": null,
-    "beforeTheFurnaceVOList": [
-        {
-            "checkProjectName": "PCB版本",
-            "checkResult": null,
-            "checkResultList": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                -1
-            ]
-        },
-        {
-            "checkProjectName": "Chip零件之规格",
-            "checkResult": null,
-            "checkResultList": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1
-            ]
-        },
-        {
-            "checkProjectName": "IC零件之规格与极性。如有极反请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "其它有方向零件之极性。如有极反请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "零件之贴片工艺。如有缺陷请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        }
-    ],
-    "aoiVoList": [
-        {
-            "checkProjectName": "PCB版本",
-            "checkResult": null,
-            "checkResultList": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                -1
-            ]
-        },
-        {
-            "checkProjectName": "Chip零件之规格。如有异常请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "IC零件之规格与极性。如有极反请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "其它有方向零件之极性。如有极反请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "零件之贴片工艺。如有缺陷请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "PCB炉后焊接状态。如有缺陷请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        }
-    ],
-    "functionTestVOList": [
-        {
-            "checkProjectName": "静耗是否正常。如有缺陷请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "工作电流是否正常。如有缺陷请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "指示灯是否正常。如有缺陷请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        },
-        {
-            "checkProjectName": "充电电流是否正常。如有缺陷请记录",
-            "checkResult": null,
-            "checkResultList": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
-            ]
-        }
-    ],
-    "beforeTheFurnaceCheck": 0,
-    "technicianConfirm": null,
-    "aoiCheck": null,
-    "qcConfirm": null,
-    "audit": null,
-    "fromNo": "SG-QR-212",
-    "fromVersion": "A/0"
+  "saleCode": "SMT测试2",
+  "materialModel": "SG-542-03",
+  "endTime": "2024-12-23 16:37:40",
+  "processType": "插件",
+  "deviceNumber": null,
+  "posts": null,
+  "textMan": "管理员",
+  "fromNo": "SG-QR-211",
+  "fromVersion": "A/1",
+  "ultimatelyCheckResult": 10,
+  "solderPastePrintingList": [
+    {
+      "checkProjectName": "锡膏是否先进先出原则领用，是否在室温下解冻4H，是否填写使用时间，领用及开盖后在24H内使用",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "印锡膏之PCB板上未贴片不得在线上停留超过60分钟",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "使用前是否有搅拌3分钟，并按少量多次原则添加使用",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    }
+  ],
+  "patchesList": [
+    {
+      "checkProjectName": "生产中途更换物料，调机优化必须经过组长、工程师、质控QC三方面先后确认后方可",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": -1
+    },
+    {
+      "checkProjectName": "工作台面是否整洁、物品摆放是否整齐、散料是否用静电袋（盒）存放",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "上板机、印刷机、贴片机、AOI日、周、月点检保养记录是否按时完成",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "在线站位表、工艺指导附件及贴片程序名是否与所生产机型名称一致",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "作业员拿板是否戴有静电环或静电手套",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    }
+  ],
+  "reflowSolderingList": [
+    {
+      "checkProjectName": "回流焊炉温及链速设置是否符合作业指导书及其附件的参数设定要求",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "生产检验员是否每小时进行功能测试并做好记录报表",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    }
+  ],
+  "aoiAutomaticallyDetectList": [
+    {
+      "checkProjectName": "经AOI检测的产品是否符合《贴片焊接检查判定标准》，AOI是否能正确的检测出良品不良品",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "检测出的良品、不良品有无标识且区分放置",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "作业员拿取PCB是否戴静电环，且轻拿轻放、不可推放、摔板、叠板",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    }
+  ],
+  "functionalTestingList": [
+    {
+      "checkProjectName": "静耗",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "工作电流",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "充电电流",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "包装摆放是否符合要求",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    }
+  ]
 }

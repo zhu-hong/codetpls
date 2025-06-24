@@ -2,7 +2,6 @@ import Panzoom from './pan-zoom'
 import { useRef, useEffect } from 'react'
 import * as xlsx from 'xlsx-js-style'
 import xlsxData from '../data.json'
-import { MentionsInput, Mention } from 'react-mentions'
 
 const s2ab = (s) => {
   const buf = new ArrayBuffer(s.length)

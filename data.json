@@ -1,172 +1,147 @@
 {
-  "saleCode": "C-WF24102401",
-  "materialModel": "喷漆",
-  "releaseQty": 3150,
-  "textMan": "韩亮亮",
-  "bakeWarmTime": null,
-  "paintingProcess": null,
+  "saleCode": "C-SF25051602",
+  "processType": "移印",
+  "materialModel": "喷漆+激光刻",
+  "endTime": null,
   "blendingRatio": null,
-  "textTime": "2024-11-15 14:59:07",
-  "fromNo": "SG-QR-146",
-  "fromVersion": "A/3",
-  "ultimatelyCheckResult": 10,
-  "materials": null,
-  "flowRate": null,
-  "testSprayList": [
-    {
-      "checkProjectName": "百格测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
-    },
-    {
-      "checkProjectName": "直接粘贴测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
-    },
-    {
-      "checkProjectName": "耐醇测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
-    },
-    {
-      "checkProjectName": "膜厚测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
-    },
-    {
-      "checkProjectName": "水煮测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
-    },
-    {
-      "checkProjectName": "反粘测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
-    }
-  ],
-  "chromaticAberrationTestList": [
-    {
-      "checkProjectName": "A面",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
-    },
-    {
-      "checkProjectName": "B面",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
-    },
-    {
-      "checkProjectName": "C面",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
-    }
-  ],
+  "releaseQty": 5250,
+  "paintingProcess": null,
+  "inspectionCheckTime": {
+    "checkProjectName": "巡检时间（时：分）",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "materialsPlastics": {
+    "checkProjectName": "塑料件用料",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "craftAging": {
+    "checkProjectName": "工艺时效",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "colorItem": {
+    "checkProjectName": "颜色",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
   "adhesionList": [
     {
       "checkProjectName": "百格测试",
       "standards": null,
       "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "直接粘贴测试",
       "standards": null,
       "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "耐醇测试",
       "standards": null,
       "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "膜厚测试",
       "standards": null,
       "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "水煮测试",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
     }
   ],
-  "visualInspectionList": [
+  "appearanceList": [
     {
-      "checkProjectName": "透光检验",
-      "standards": "",
+      "checkProjectName": "色差",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "积油",
-      "standards": "",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "少油",
-      "standards": "",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "飞油",
-      "standards": "",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "脏污",
       "standards": null,
       "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "哑色",
       "standards": null,
       "realitySizes": null,
-      "checkResult": null,
-      "confirmCheckResult": null
+      "checkResult": null
     },
     {
       "checkProjectName": "烧底",
-      "standards": "",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "透光",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
     }
   ],
-  "sprayingPositionList": [
-    {
-      "checkProjectName": "核对订单要求",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1,
-      "confirmCheckResult": null
-    }
-  ]
+  "productPlacement": {
+    "checkProjectName": "产品摆放",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "decision": {
+    "checkProjectName": "判定（OK/NG）",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "posts": {
+    "checkProjectName": "职位",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "nameSignature": {
+    "checkProjectName": "姓名（签名）",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "inspectionCheckEndTime": {
+    "checkProjectName": "巡检结束时间（时：分）",
+    "standards": null,
+    "realitySizes": null,
+    "checkResult": null
+  },
+  "fromNo": "SG-QR-101",
+  "fromVersion": "A/3"
 }

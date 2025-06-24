@@ -2,6 +2,7 @@ import Panzoom from './pan-zoom'
 import { useRef, useEffect } from 'react'
 import * as xlsx from 'xlsx-js-style'
 import xlsxData from '../data.json'
+import { MentionsInput, Mention } from 'react-mentions'
 
 const s2ab = (s) => {
   const buf = new ArrayBuffer(s.length)
@@ -59,40 +60,42 @@ function App() {
     }
 
     const data = [
-      ['表面处理车间首件记录表', null, null, null, null],
-      [`订单号：${xlsxData.saleCode || ''}`, null, `规格型号：${xlsxData.materialModel || ''}`, `订单数量：${xlsxData.releaseQty || ''}`, null],
-      [`送检人：${xlsxData.textMan || ''}`, null, `烘烤温度/时间：${xlsxData.bakeWarmTime || ''}`, `喷漆工艺：${xlsxData.paintingProcess || ''}`, null],
-      [`送检日期：${xlsxData.textTime || ''}`, null, `调油比例（油漆：固化剂：水）：${xlsxData.blendingRatio || ''}`, '', null],
-      ['检验项', null, '测试结果', '确认结果', '确认时间/确认人'],
-      ['用料', null, xlsxData.materials ? getResultText(xlsxData.materials.checkResult) : '', xlsxData.materials ? getResultText(xlsxData.materials.confirmCheckResult) : '', ''],
-      ['流量（s）', null, xlsxData.materials ? getResultText(xlsxData.flowRate.checkResult) : '', xlsxData.flowRate ? getResultText(xlsxData.materials.confirmCheckResult) : '', null],
-      [`试喷（大货前一天试喷测试验证）`, '百格测试', getResultText(xlsxData.testSprayList[0].checkResult), getResultText(xlsxData.testSprayList[0].checkResult), null],
-      [null, '直接粘贴测试', getResultText(xlsxData.testSprayList[1].checkResult), getResultText(xlsxData.testSprayList[1].checkResult), null],
-      [null, '耐醇测试', getResultText(xlsxData.testSprayList[2].checkResult), getResultText(xlsxData.testSprayList[2].checkResult), null],
-      [null, '膜厚测试', getResultText(xlsxData.testSprayList[3].checkResult), getResultText(xlsxData.testSprayList[3].checkResult), null],
-      [null, '水煮测试', getResultText(xlsxData.testSprayList[4].checkResult), getResultText(xlsxData.testSprayList[4].checkResult), null],
-      [null, '反粘测试', getResultText(xlsxData.testSprayList[5].checkResult), getResultText(xlsxData.testSprayList[5].checkResult), null],
-      [`色差检验`, 'A面', getResultText(xlsxData.chromaticAberrationTestList[0].checkResult), getResultText(xlsxData.chromaticAberrationTestList[0].checkResult), ''],
-      [null, 'B面', getResultText(xlsxData.chromaticAberrationTestList[1].checkResult), getResultText(xlsxData.chromaticAberrationTestList[1].checkResult), null],
-      [null, 'C面', getResultText(xlsxData.chromaticAberrationTestList[2].checkResult), getResultText(xlsxData.chromaticAberrationTestList[2].checkResult), null],
-      [`附着力`, '百格测试', getResultText(xlsxData.adhesionList[0].checkResult), getResultText(xlsxData.adhesionList[0].checkResult), ''],
-      [null, '直接粘贴测试', getResultText(xlsxData.adhesionList[1].checkResult), getResultText(xlsxData.adhesionList[1].checkResult), null],
-      [null, '耐醇测试', getResultText(xlsxData.adhesionList[2].checkResult), getResultText(xlsxData.adhesionList[2].checkResult), null],
-      [null, '膜厚测试', getResultText(xlsxData.adhesionList[3].checkResult), getResultText(xlsxData.adhesionList[3].checkResult), null],
-      [`外观检验`, '透光检验', getResultText(xlsxData.visualInspectionList[0].checkResult), getResultText(xlsxData.visualInspectionList[0].checkResult), ''],
-      [null, '积油', getResultText(xlsxData.visualInspectionList[1].checkResult), getResultText(xlsxData.visualInspectionList[1].checkResult), null],
-      [null, '少油', getResultText(xlsxData.visualInspectionList[2].checkResult), getResultText(xlsxData.visualInspectionList[2].checkResult), null],
-      [null, '飞油', getResultText(xlsxData.visualInspectionList[3].checkResult), getResultText(xlsxData.visualInspectionList[3].checkResult), null],
-      [null, '脏污', getResultText(xlsxData.visualInspectionList[4].checkResult), getResultText(xlsxData.visualInspectionList[4].checkResult), null],
-      [null, '哑色', getResultText(xlsxData.visualInspectionList[5].checkResult), getResultText(xlsxData.visualInspectionList[5].checkResult), null],
-      [null, '烧底', getResultText(xlsxData.visualInspectionList[6].checkResult), getResultText(xlsxData.visualInspectionList[6].checkResult), null],
-      [`喷涂位置`, '核对订单要求', getResultText(xlsxData.sprayingPositionList[0].checkResult), getResultText(xlsxData.sprayingPositionList[0].checkResult), null],
-      [`异常处理记录`, null, null, null, null],
-      [`备注：1、测试结果由送检人填写，确认结果由巡检填写。不适用检验项打“/”，透光检验适用于透光主体。                   
-      2、首件记录表与喷漆工艺参数表一起提交，由IPQC复测工艺参数（工艺参数和首件提交后默认参数是被生产确认过
-      3、大货生产前一天需进行大货试喷验证，验证通过后可生产大货，大货前一天未试喷测试验证的不允许生产大货`, null, null, null, null],
-      [`   生产：${getResultText(xlsxData.ultimatelyCheckResult)}                                   审核：                                          日期：${xlsxData.textTime || ''}    				`, null, null, null, null],
-      [`表单编号：SG-QR-146 版本/次：A/3`, null, null, null, null],
+      ['表面处理车间巡检记录表', null, null, null, null, null, null, null, null, null],
+      [`订单号：${xlsxData.saleCode || ''}`, null, null, `批号：${xlsxData.processType || ''}`, null, '规格型号：', xlsxData.materialModel || '', '日期：', xlsxData.endTime || '', null],
+      [`调油比例：${xlsxData.blendingRatio || ''}`, null, null, `订单数量：${xlsxData.releaseQty || ''}`, null, `喷漆工艺：${xlsxData.paintingProcess || ''}`, null, null, null, null],
+      [`巡检时间（时：分）`, null, null, null, null, null, null, null, null, null],
+      [`塑料件用料`, null, null, null, null, null, null, null, null, null],
+      [`工艺时效`, null, null, null, null, null, null, null, null, null],
+      [`颜色`, null, null, null, null, null, null, null, null, null],
+      [`附着力`, '百格测试', null, null, null, null, null, null, null, null],
+      [null, '直接粘贴测试', null, null, null, null, null, null, null, null],
+      [null, '耐醇测试', null, null, null, null, null, null, null, null],
+      [null, '膜厚测试', null, null, null, null, null, null, null, null],
+      [null, '水煮测试', null, null, null, null, null, null, null, null],
+      [`外观`, '色差', null, null, null, null, null, null, null, null],
+      [null, '积油', null, null, null, null, null, null, null, null],
+      [null, '少油', null, null, null, null, null, null, null, null],
+      [null, '飞油', null, null, null, null, null, null, null, null],
+      [null, '脏污', null, null, null, null, null, null, null, null],
+      [null, '哑色', null, null, null, null, null, null, null, null],
+      [null, '烧底', null, null, null, null, null, null, null, null],
+      [null, '透光', null, null, null, null, null, null, null, null],
+      [`产品摆放`, null, null, null, null, null, null, null, null, null],
+      [`判定（OK/NG)		`, null, null, null, null, null, null, null, null, null],
+      [`职位		`, null, null, null, null, null, null, null, null, null],
+      [`姓名（签字）`, null, null, null, null, null, null, null, null, null],
+      [`巡检结束时间（时：分）`, null, null, null, null, null, null, null, null, null],
+      [`检验时间`, '入库数量', '抽检数量', '转序检验项目', null, null, null, null, '不良数', '结果判定'],
+      [null, null, null, '用料', '颜色', '附着力', '外观', '产品摆放', null, null],
+      ['', '', '', '', '', '', '', '', '', ''],
+      ['', '', '', '', '', '', '', '', '', ''],
+      ['异常处理记录：', null, null, null, null, null, null, null, null, null],
+      [`注： 1、每个检验项目只填发现不合格数和不良现象； 2、当抽样超标后应在“异常处理记录”中记录处理过程；
+     2、检验项不适用打“/”
+     3、水煮测试每个单同一时间段只做一次测试，不同时间段多批次根据喷的批次来做测试
+     4、重涂产品分开标注进行测试
+     5、IPQC和组长： 4H/次 ；QA和车间主管 ：  每天/次。 （多次换线时，只需在当时报表上填写记录）`, null, null, null, null, null, null, null, null, null],
+      ['审核：', null, null, null, `日期：${xlsxData.endTime || ''}`, null, '表单编号：SG-QR-101 版本：  A/3', null, null, null],
     ]
     const workSheet = xlsx.utils.json_to_sheet(data, {
       skipHeader: true,
@@ -103,21 +106,36 @@ function App() {
         wpx: 96,
       },
       {
-        wpx: 120,
-      },
-      {
-        wpx: 320,
+        wpx: 96,
       },
       {
         wpx: 96,
       },
       {
-        wpx: 132,
+        wpx: 96,
+      },
+      {
+        wpx: 96,
+      },
+      {
+        wpx: 96,
+      },
+      {
+        wpx: 96,
+      },
+      {
+        wpx: 96,
+      },
+      {
+        wpx: 96,
+      },
+      {
+        wpx: 96,
       },
     ]
     workSheet['!rows'] = [
       {
-        hpx: 48,
+        hpx: 58,
       },
       {
         hpx: 36,
@@ -201,13 +219,13 @@ function App() {
         hpx: 36,
       },
       {
-        hpx: 72,
-      },
-      {
-        hpx: 96,
-      },
-      {
         hpx: 36,
+      },
+      {
+        hpx: 84,
+      },
+      {
+        hpx: 132,
       },
       {
         hpx: 36,
@@ -216,89 +234,177 @@ function App() {
     workSheet['!merges'] = [
       {
         s: { r: 0, c: 0, },
-        e: { r: 0, c: 4, },
+        e: { r: 0, c: 9, },
       },
       {
         s: { r: 1, c: 0, },
-        e: { r: 1, c: 1, },
+        e: { r: 1, c: 2, },
       },
       {
         s: { r: 1, c: 3, },
         e: { r: 1, c: 4, },
       },
       {
+        s: { r: 1, c: 8, },
+        e: { r: 1, c: 9, },
+      },
+      {
         s: { r: 2, c: 0, },
-        e: { r: 2, c: 1, },
+        e: { r: 2, c: 2, },
       },
       {
         s: { r: 2, c: 3, },
         e: { r: 2, c: 4, },
       },
       {
-        s: { r: 3, c: 0, },
-        e: { r: 3, c: 1, },
+        s: { r: 2, c: 5, },
+        e: { r: 2, c: 9, },
       },
       {
-        s: { r: 3, c: 3, },
-        e: { r: 3, c: 4, },
+        s: { r: 3, c: 0, },
+        e: { r: 3, c: 2, },
       },
       {
         s: { r: 4, c: 0, },
-        e: { r: 4, c: 1, },
+        e: { r: 4, c: 2, },
       },
       {
         s: { r: 5, c: 0, },
-        e: { r: 5, c: 1, },
-      },
-      {
-        s: { r: 5, c: 4, },
-        e: { r: 12, c: 4, },
+        e: { r: 5, c: 2, },
       },
       {
         s: { r: 6, c: 0, },
-        e: { r: 6, c: 1, },
+        e: { r: 6, c: 2, },
       },
       {
         s: { r: 7, c: 0, },
-        e: { r: 12, c: 0, },
+        e: { r: 11, c: 0, },
       },
       {
-        s: { r: 13, c: 0, },
-        e: { r: 15, c: 0, },
+        s: { r: 7, c: 1, },
+        e: { r: 7, c: 2, },
       },
       {
-        s: { r: 16, c: 0, },
+        s: { r: 8, c: 1, },
+        e: { r: 8, c: 2, },
+      },
+      {
+        s: { r: 9, c: 1, },
+        e: { r: 9, c: 2, },
+      },
+      {
+        s: { r: 10, c: 1, },
+        e: { r: 10, c: 2, },
+      },
+      {
+        s: { r: 11, c: 1, },
+        e: { r: 11, c: 2, },
+      },
+      {
+        s: { r: 12, c: 0, },
         e: { r: 19, c: 0, },
       },
       {
+        s: { r: 12, c: 1, },
+        e: { r: 12, c: 2, },
+      },
+      {
+        s: { r: 13, c: 1, },
+        e: { r: 13, c: 2, },
+      },
+      {
+        s: { r: 14, c: 1, },
+        e: { r: 14, c: 2, },
+      },
+      {
+        s: { r: 15, c: 1, },
+        e: { r: 15, c: 2, },
+      },
+      {
+        s: { r: 16, c: 1, },
+        e: { r: 16, c: 2, },
+      },
+      {
+        s: { r: 17, c: 1, },
+        e: { r: 17, c: 2, },
+      },
+      {
+        s: { r: 18, c: 1, },
+        e: { r: 18, c: 2, },
+      },
+      {
+        s: { r: 19, c: 1, },
+        e: { r: 19, c: 2, },
+      },
+      {
         s: { r: 20, c: 0, },
+        e: { r: 20, c: 2, },
+      },
+      {
+        s: { r: 21, c: 0, },
+        e: { r: 21, c: 2, },
+      },
+      {
+        s: { r: 22, c: 0, },
+        e: { r: 22, c: 2, },
+      },
+      {
+        s: { r: 23, c: 0, },
+        e: { r: 23, c: 2, },
+      },
+      {
+        s: { r: 24, c: 0, },
+        e: { r: 24, c: 2, },
+      },
+      {
+        s: { r: 25, c: 0, },
         e: { r: 26, c: 0, },
       },
       {
-        s: { r: 13, c: 4, },
-        e: { r: 27, c: 4, },
+        s: { r: 25, c: 1, },
+        e: { r: 26, c: 1, },
       },
       {
-        s: { r: 28, c: 0, },
-        e: { r: 28, c: 4, },
+        s: { r: 25, c: 2, },
+        e: { r: 26, c: 2, },
+      },
+      {
+        s: { r: 25, c: 8, },
+        e: { r: 26, c: 8, },
+      },
+      {
+        s: { r: 25, c: 9, },
+        e: { r: 26, c: 9, },
+      },
+      {
+        s: { r: 25, c: 3, },
+        e: { r: 25, c: 7, },
       },
       {
         s: { r: 29, c: 0, },
-        e: { r: 29, c: 4, },
+        e: { r: 29, c: 9, },
       },
       {
         s: { r: 30, c: 0, },
-        e: { r: 30, c: 4, },
+        e: { r: 30, c: 9, },
       },
       {
         s: { r: 31, c: 0, },
-        e: { r: 31, c: 4, },
+        e: { r: 31, c: 3, },
+      },
+      {
+        s: { r: 31, c: 4, },
+        e: { r: 31, c: 5, },
+      },
+      {
+        s: { r: 31, c: 6, },
+        e: { r: 31, c: 9, },
       },
     ]
 
     Array.from({ length: 32 }).forEach((_, i) => {
       const idx = i + 1
-      'abcde'.split('').map((l) => l.toUpperCase()).forEach((l) => {
+      'abcdefghij'.split('').map((l) => l.toUpperCase()).forEach((l) => {
         workSheet[l+idx].s = {
           font: {
             sz: 14,
@@ -312,6 +418,19 @@ function App() {
         }
       })
     })
+
+    workSheet['A1'].s = {
+      font: {
+        sz: 24,
+        name: '宋体',
+        bold: true,
+      },
+      alignment: {
+        vertical: 'center',
+        horizontal: 'center',
+        wrapText: 1,
+      },
+    }
 
     xlsx.utils.book_append_sheet(workBook, workSheet, 'sheet')
 

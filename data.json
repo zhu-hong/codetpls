@@ -1,123 +1,11 @@
 {
-  "saleCode": "C-SF25051602",
-  "processType": "移印",
-  "materialModel": "喷漆+激光刻",
-  "endTime": null,
-  "blendingRatio": null,
-  "releaseQty": 5250,
-  "paintingProcess": null,
-  "inspectionCheckTime": {
-    "checkProjectName": "巡检时间（时：分）",
-    "standards": null,
-    "realitySizes": null,
-    "checkResult": null
-  },
-  "materialsPlastics": {
-    "checkProjectName": "塑料件用料",
-    "standards": null,
-    "realitySizes": null,
-    "checkResult": null
-  },
-  "craftAging": {
-    "checkProjectName": "工艺时效",
-    "standards": null,
-    "realitySizes": null,
-    "checkResult": null
-  },
-  "colorItem": {
-    "checkProjectName": "颜色",
-    "standards": null,
-    "realitySizes": null,
-    "checkResult": null
-  },
-  "adhesionList": [
-    {
-      "checkProjectName": "百格测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "直接粘贴测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "耐醇测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "膜厚测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "水煮测试",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    }
-  ],
-  "appearanceList": [
-    {
-      "checkProjectName": "色差",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "积油",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "少油",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "飞油",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "脏污",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "哑色",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "烧底",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "透光",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    }
-  ],
-  "productPlacement": {
-    "checkProjectName": "产品摆放",
-    "standards": null,
-    "realitySizes": null,
-    "checkResult": null
-  },
+  "saleCode": "装配测试5",
+  "processType": "包装",
+  "materialModel": "植毛+激光刻",
+  "batchNo": null,
+  "textTime": "2025-04-07 13:37:18",
+  "endTime": "2025-04-07 13:39:18",
+  "ultimatelyCheckResult": 10,
   "decision": {
     "checkProjectName": "判定（OK/NG）",
     "standards": null,
@@ -126,9 +14,9 @@
   },
   "posts": {
     "checkProjectName": "职位",
-    "standards": null,
+    "standards": "",
     "realitySizes": null,
-    "checkResult": null
+    "checkResult": 1
   },
   "nameSignature": {
     "checkProjectName": "姓名（签名）",
@@ -142,6 +30,116 @@
     "realitySizes": null,
     "checkResult": null
   },
-  "fromNo": "SG-QR-101",
-  "fromVersion": "A/3"
+  "fromNo": "SG-QR-145",
+  "fromVersion": "A/1",
+  "performanceTestingItemList": [
+    {
+      "checkProjectName": "充电电流(MA)",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "扭力（N.M）",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "插拔力（N）",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "刷头间隙(MM)",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "敲击测试",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "称重(g/kg)",
+      "standards": "",
+      "realitySizes": [
+        "1"
+      ],
+      "checkResult": 1
+    }
+  ],
+  "visualInspectionItemList": [
+    {
+      "checkProjectName": "产品清洁",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "产品外观",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "配合",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "附着力",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    }
+  ],
+  "inspectionPackingItemList": [
+    {
+      "checkProjectName": "作业指导书",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "说明书",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "标贴",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "彩盒/泡壳/彩卡",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "袋子（CPE袋、PP袋等）",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "冲孔/挂直",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    },
+    {
+      "checkProjectName": "外箱/封箱",
+      "standards": "",
+      "realitySizes": null,
+      "checkResult": 1
+    }
+  ]
 }

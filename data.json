@@ -1,11 +1,11 @@
 {
-  "saleCode": "装配测试5",
-  "processType": "包装",
-  "materialModel": "植毛+激光刻",
+  "saleCode": "C-TZ24101501",
+  "processType": "组装",
+  "materialModel": "SG-420E",
   "batchNo": null,
-  "textTime": "2025-04-07 13:37:18",
-  "endTime": "2025-04-07 13:39:18",
-  "ultimatelyCheckResult": 10,
+  "textTime": null,
+  "endTime": null,
+  "ultimatelyCheckResult": 15,
   "decision": {
     "checkProjectName": "判定（OK/NG）",
     "standards": null,
@@ -14,9 +14,9 @@
   },
   "posts": {
     "checkProjectName": "职位",
-    "standards": "",
+    "standards": null,
     "realitySizes": null,
-    "checkResult": 1
+    "checkResult": null
   },
   "nameSignature": {
     "checkProjectName": "姓名（签名）",
@@ -30,9 +30,41 @@
     "realitySizes": null,
     "checkResult": null
   },
-  "fromNo": "SG-QR-145",
+  "fromNo": "SG-QR-144",
   "fromVersion": "A/1",
-  "performanceTestingItemList": [
+  "airTightnessItemList": [
+    {
+      "checkProjectName": "泄漏值(KPA）",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "保持值(KPA）",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "OK样品检查",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "NG样品检查",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    }
+  ],
+  "functionalityItemList": [
+    {
+      "checkProjectName": "工作电流(MA)",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
     {
       "checkProjectName": "充电电流(MA)",
       "standards": null,
@@ -40,106 +72,72 @@
       "checkResult": null
     },
     {
-      "checkProjectName": "扭力（N.M）",
+      "checkProjectName": "静耗电流(UA)",
       "standards": null,
       "realitySizes": null,
       "checkResult": null
     },
     {
-      "checkProjectName": "插拔力（N）",
+      "checkProjectName": "噪音（dB）",
       "standards": null,
       "realitySizes": null,
       "checkResult": null
-    },
-    {
-      "checkProjectName": "刷头间隙(MM)",
-      "standards": null,
-      "realitySizes": null,
-      "checkResult": null
-    },
-    {
-      "checkProjectName": "敲击测试",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "称重(g/kg)",
-      "standards": "",
-      "realitySizes": [
-        "1"
-      ],
-      "checkResult": 1
     }
   ],
-  "visualInspectionItemList": [
+  "otherItemList": [
     {
-      "checkProjectName": "产品清洁",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "产品外观",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "配合",
+      "checkProjectName": "零件固定",
       "standards": null,
       "realitySizes": null,
       "checkResult": null
     },
     {
-      "checkProjectName": "附着力",
-      "standards": "",
+      "checkProjectName": "配合/手感/间隙",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1
-    }
-  ],
-  "inspectionPackingItemList": [
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "焊接",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "仪器设备",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "外观",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "杂物",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
+    {
+      "checkProjectName": "产品功能",
+      "standards": null,
+      "realitySizes": null,
+      "checkResult": null
+    },
     {
       "checkProjectName": "作业指导书",
-      "standards": "",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1
+      "checkResult": null
     },
     {
-      "checkProjectName": "说明书",
-      "standards": "",
+      "checkProjectName": "工装夹具",
+      "standards": null,
       "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "标贴",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "彩盒/泡壳/彩卡",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "袋子（CPE袋、PP袋等）",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "冲孔/挂直",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
-    },
-    {
-      "checkProjectName": "外箱/封箱",
-      "standards": "",
-      "realitySizes": null,
-      "checkResult": 1
+      "checkResult": null
     }
   ]
 }
